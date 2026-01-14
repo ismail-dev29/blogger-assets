@@ -10,3 +10,43 @@ body {
   border-radius: 8px;
   background: #fafafa;
 }
+
+/* تصميم صندوق التحميل الاحترافي */
+.hearts-download-box {
+  background: #ffffff;
+  border: 2px dashed #2b55a8;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.hearts-download-box:hover {
+  transform: translateY(-5px);
+  border-style: solid;
+}
+
+.hearts-download-box h4 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.hearts-download-btn {
+  display: inline-block;
+  background: #2b55a8;
+  color: #fff !important;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.hearts-download-btn:hover {
+  background: #1a3a7a;
+  box-shadow: 0 5px 15px rgba(43, 85, 168, 0.3);
+}
