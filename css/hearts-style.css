@@ -1,42 +1,73 @@
-/* صندوق المقال */
+/* ----- العمود الرئيسي للمقال ----- */
+.post-body, .entry-content, .item-post-resizer {
+    max-width: 700px !important;
+    margin: 0 auto !important;        /* يوسّط العمود */
+    background-color: #ffffff;         /* خلفية بيضاء */
+    padding: 20px 30px !important;
+    line-height: 1.8 !important;
+    font-size: 18px !important;
+    text-align: right !important;     /* محاذاة النص لليمين */
+    word-wrap: break-word;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+/* الفقرات والقوائم */
+.post-body p {
+    margin-bottom: 25px !important;
+    display: block !important;
+}
+
+.post-body ul, .post-body ol {
+    padding-right: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.post-body li {
+    margin-bottom: 10px !important;
+}
+
+/* ----- الصندوق الرئيسي للمقال ----- */
 .hearts-box {
-  border: 1px solid #e0e0e0;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 12px;
-  background: #fafafa;
-  max-width: 800px;
-  text-align: center;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    background: #fafafa;
+    max-width: 800px;
+    text-align: center;
 }
 
-/* العناوين بخلفية ملونة (بدون Blur) */
-.blurry-title {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 28px;
-  color: #fff;
-  background: linear-gradient(135deg, #2b55a8, #00c864); /* أزرق-أخضر */
-  border-radius: 8px;
-  margin-bottom: 15px;
+/* ----- العنوان الضبابي الأزرق ----- */
+.blue-blurry-title {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 28px;
+    color: #fff;
+    background: rgba(43, 85, 168, 0.6); /* أزرق نصف شفاف */
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    margin-bottom: 15px;
 }
 
-/* صندوق التحميل */
+/* ----- صندوق التحميل ----- */
 .hearts-download-box {
-  background: #ffffff;
-  border: 2px dashed #2b55a8;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  margin: 20px 0;
+    background: #ffffff;
+    border: 2px dashed #2b55a8;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
 }
 
 .hearts-download-btn {
-  display: inline-block;
-  background: #2b55a8;
-  color: #fff !important;
-  padding: 12px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 15px;
+    display: inline-block;
+    background: #2b55a8;
+    color: #fff !important;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
   }
