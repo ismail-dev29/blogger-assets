@@ -3,12 +3,26 @@ body {
   font-family: Tajawal, Cairo, Arial, sans-serif;
 }
 
+/* الصندوق الرئيسي للمقال */
 .hearts-box {
   border: 1px solid #e0e0e0;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
   background: #fafafa;
+  max-width: 800px; /* عرض ثابت للمقال */
+  text-align: center; /* جعل النصوص في الوسط */
+}
+
+/* العناوين مع خلفية ملونة (Gradient) تعمل على كل القوالب */
+.blurry-title {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 28px;
+  color: #fff;
+  background: linear-gradient(135deg, #2b55a8, #00c864); /* أزرق-أخضر */
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 /* تصميم صندوق التحميل الاحترافي */
@@ -49,35 +63,4 @@ body {
 .hearts-download-btn:hover {
   background: #1a3a7a;
   box-shadow: 0 5px 15px rgba(43, 85, 168, 0.3);
-}
-/* الصندوق الرئيسي للمقال */
-.hearts-box {
-  border: 1px solid #e0e0e0;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 12px;
-  background: #fafafa;
-  max-width: 800px; /* تحديد عرض ثابت للمقال */
-  text-align: center; /* جعل النصوص في الوسط */
-}
-
-/* تأثير خلفية ضبابية للعناوين */
-.blurry-title {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 28px;
-  color: #fff;
-  margin-bottom: 15px;
-  z-index: 1;
-}
-
-.blurry-title::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(135deg, rgba(43, 85, 168, 0.6), rgba(0, 200, 100, 0.6));
-  filter: blur(12px);
-  border-radius: 8px;
-  z-index: -1;
 }
