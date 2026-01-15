@@ -1,20 +1,15 @@
-/* Hearts Site - GitHub Assets */
-body {
-  font-family: Tajawal, Cairo, Arial, sans-serif;
-}
-
-/* الصندوق الرئيسي للمقال */
+/* صندوق المقال */
 .hearts-box {
   border: 1px solid #e0e0e0;
   padding: 20px;
   margin: 20px auto;
   border-radius: 12px;
   background: #fafafa;
-  max-width: 800px; /* عرض ثابت للمقال */
-  text-align: center; /* جعل النصوص في الوسط */
+  max-width: 800px;
+  text-align: center;
 }
 
-/* العناوين مع خلفية ملونة (Gradient) تعمل على كل القوالب */
+/* العناوين بخلفية ملونة (بدون Blur) */
 .blurry-title {
   display: inline-block;
   padding: 10px 20px;
@@ -25,7 +20,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* تصميم صندوق التحميل الاحترافي */
+/* صندوق التحميل */
 .hearts-download-box {
   background: #ffffff;
   border: 2px dashed #2b55a8;
@@ -33,19 +28,6 @@ body {
   padding: 20px;
   text-align: center;
   margin: 20px 0;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.hearts-download-box:hover {
-  transform: translateY(-5px);
-  border-style: solid;
-}
-
-.hearts-download-box h4 {
-  color: #333;
-  margin-bottom: 10px;
-  font-size: 18px;
 }
 
 .hearts-download-btn {
@@ -57,10 +39,4 @@ body {
   text-decoration: none;
   font-weight: bold;
   margin-top: 15px;
-  transition: background 0.3s;
-}
-
-.hearts-download-btn:hover {
-  background: #1a3a7a;
-  box-shadow: 0 5px 15px rgba(43, 85, 168, 0.3);
-}
+  }
