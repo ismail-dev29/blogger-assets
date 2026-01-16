@@ -142,31 +142,21 @@
 .hearts-info-pro p {
   @apply text-blue-600 text-lg;
   }
-/* ===== نص إسلامي مع وميض آمن فقط على هذا الكلاس ===== */
+/* ===== نص إسلامي يظهر ويختفي ===== */
 .hearts-islamic-text {
   font-family: "Tajawal", "Amiri", serif !important;
   font-style: italic;
   font-size: 22px;
-  color: rgba(0,0,0,0.75); /* أسود/رمادي */
+  color: rgba(0,0,0,0.85);
   text-align: center;
   line-height: 2;
   margin: 20px auto;
 
-  /* وميض آمن فقط على هذا الكلاس */
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
+  /* وميض حقيقي */
+  animation: islamic-blink 1.5s infinite;
 }
 
-.hearts-islamic-text:hover {
-  opacity: 0.4; /* لا يغير لون أي عنصر آخر */
+@keyframes islamic-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
-
-/* إذا تريد وميض تلقائي */
-.hearts-islamic-text {
-  animation: hearts-blink 2s infinite alternate;
-}
-
-@keyframes hearts-blink {
-  from { opacity: 1; }
-  to { opacity: 0.4; }
-  }
