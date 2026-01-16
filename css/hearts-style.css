@@ -162,39 +162,23 @@
   50% { opacity: 0.3; filter: blur(1px); } /* وميض ناعم مع ضبابية خفيفة */
 }
 
-/* ===== مشاركة نصية أسفل المقال ===== */
-.hearts-share {
-  margin: 30px auto;
-  padding-top: 15px;
-  border-top: 1px solid #e5e5e5;
+/* ===== مشاركة نصية بسيطة (w t f) ===== */
+.hearts-share-text {
+  margin: 30px auto 10px;
   text-align: center;
+  font-family: Tajawal, sans-serif;
   font-size: 15px;
+  letter-spacing: 6px;
 }
 
-.hearts-share a {
-  display: inline-block;
-  margin: 0 8px;
-  color: #555;
+.hearts-share-text a {
+  color: rgba(0,0,0,0.55); /* رصاصي ناعم */
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  margin: 0 18px;
+  transition: color 0.3s ease;
 }
 
-/* تأثير hover */
-.hearts-share a:hover {
-  color: #1e3c72;
-  transform: translateY(-2px);
-}
-
-/* تخصيص كل منصة */
-.hearts-facebook::after {
-  content: " ⤴";
-}
-
-.hearts-twitter::after {
-  content: " ⤴";
-}
-
-.hearts-whatsapp::after {
-  content: " ⤴";
+/* عند المرور */
+.hearts-share-text a:hover {
+  color: rgba(0,0,0,0.85);
 }
