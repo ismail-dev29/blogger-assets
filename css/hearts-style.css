@@ -1,126 +1,67 @@
-/* ====== Hearts Library for Blogger ====== */
+/* ====== Hearts Library for Blogger (Tailwind @apply) ====== */
 
 /* ----- العمود الرئيسي للمقال ----- */
-.post-body, .entry-content, .item-post-resizer {
-    max-width: 700px !important;
-    margin: 20px auto !important;
-    background-color: #ffffff;
-    padding: 20px 30px !important;
-    line-height: 1.8 !important;
-    font-size: 18px !important;
-    text-align: right !important;
-    word-wrap: break-word;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    border-radius: 8px;
+.post-body,
+.entry-content,
+.item-post-resizer {
+  @apply max-w-2xl mx-auto my-5 bg-white p-8 leading-relaxed text-lg text-right break-words rounded-lg shadow;
 }
 
 /* الفقرات والقوائم */
 .post-body p {
-    margin-bottom: 20px !important;
+  @apply mb-5;
 }
-.post-body ul, .post-body ol {
-    padding-right: 20px !important;
-    margin-bottom: 15px !important;
+.post-body ul,
+.post-body ol {
+  @apply pr-5 mb-4;
 }
 .post-body li {
-    margin-bottom: 10px !important;
+  @apply mb-2;
 }
 
 /* ----- مربعات عامة ----- */
 .hearts-box {
-  background: #fafafa;
-  border: 1px solid #e0e0e0;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 20px 0;
-  text-align: center;
+  @apply bg-gray-50 border border-gray-200 p-5 rounded-xl my-5 text-center;
 }
 
 /* ----- مربعات معلومة / تحذير / نجاح ----- */
 .hearts-info {
-  background: #e8f2ff;
-  border-right: 5px solid #2b55a8;
-  padding: 18px;
-  border-radius: 10px;
-  margin: 20px 0;
+  @apply bg-blue-50 border-r-4 border-blue-700 p-4 rounded-lg my-5;
 }
-
 .hearts-warning {
-  background: #fff4e5;
-  border-right: 5px solid #ff9800;
-  padding: 18px;
-  border-radius: 10px;
-  margin: 20px 0;
+  @apply bg-yellow-50 border-r-4 border-yellow-500 p-4 rounded-lg my-5;
 }
-
 .hearts-success {
-  background: #e6f7ee;
-  border-right: 5px solid #28a745;
-  padding: 18px;
-  border-radius: 10px;
-  margin: 20px 0;
+  @apply bg-green-50 border-r-4 border-green-600 p-4 rounded-lg my-5;
 }
 
 /* ----- بطاقات المحتوى (Grid / Cards) ----- */
 .hearts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin: 20px 0;
+  @apply grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-5;
 }
-
 .hearts-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  @apply bg-white rounded-xl p-5 text-center shadow-md;
 }
 
 /* ----- خلفيات متدرجة ----- */
 .hearts-bg-light {
-  background: linear-gradient(135deg,#f5f7fa,#e8ecf3);
-  padding: 25px;
-  border-radius: 14px;
+  @apply bg-gradient-to-br from-gray-100 to-gray-200 p-6 rounded-xl;
 }
-
 .hearts-bg-dark {
-  background: #1e1e2f;
-  color: #ffffff;
-  padding: 25px;
-  border-radius: 14px;
+  @apply bg-gray-900 text-white p-6 rounded-xl;
 }
 
 /* ----- أزرار احترافية ----- */
 .hearts-btn {
-  display: inline-block;
-  background: linear-gradient(to right,#2b55a8,#1e3c72);
-  color: #fff !important;
-  padding: 12px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
+  @apply inline-block bg-gradient-to-r from-blue-700 to-blue-900 text-white px-7 py-3 rounded-full font-bold no-underline transition-transform hover:scale-105;
 }
 
 /* ----- صندوق تحميل ----- */
 .hearts-download-box {
-  background: #ffffff;
-  border: 2px dashed #2b55a8;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  margin: 20px 0;
+  @apply bg-white border-2 border-dashed border-blue-700 rounded-xl p-5 text-center my-5;
 }
-
 .hearts-download-btn {
-  display: inline-block;
-  background: #2b55a8;
-  color: #fff !important;
-  padding: 12px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 15px;
+  @apply inline-block bg-blue-700 text-white px-6 py-3 rounded-full font-bold no-underline mt-4;
 }
 
 /* ----- تحسين العناوين داخل الصناديق ----- */
@@ -128,54 +69,20 @@
 .hearts-info h2,
 .hearts-warning h2,
 .hearts-success h2 {
-  font-size: 24px;
-  color: #2b55a8;
-  margin-bottom: 15px;
+  @apply text-2xl text-blue-700 mb-4;
 }
 
 /* ======= أشكال إضافية ======= */
 
 /* ----- دائرة ----- */
 .hearts-circle {
-  width: 150px;
-  height: 150px;
-  background: #2b55a8;
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 20px auto;
-  font-weight: bold;
-  font-size: 18px;
+  @apply w-36 h-36 bg-blue-700 text-white rounded-full flex items-center justify-center text-center mx-auto my-5 font-bold text-lg;
 }
 
 /* ----- مربعات ملونة ----- */
 .hearts-square-red {
-  width: 200px;
-  height: 200px;
-  background: #ff4c4c;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  margin: 20px auto;
-  font-weight: bold;
-  text-align: center;
+  @apply w-48 h-48 bg-red-600 text-white flex items-center justify-center rounded-xl mx-auto my-5 font-bold text-center;
 }
-
 .hearts-square-green {
-  width: 200px;
-  height: 200px;
-  background: #28a745;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  margin: 20px auto;
-  font-weight: bold;
-  text-align: center;
+  @apply w-48 h-48 bg-green-600 text-white flex items-center justify-center rounded-xl mx-auto my-5 font-bold text-center;
 }
