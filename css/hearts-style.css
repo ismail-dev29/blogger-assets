@@ -142,21 +142,3 @@
 .hearts-info-pro p {
   @apply text-blue-600 text-lg;
   }
-/* ===== نص إسلامي يظهر ويختفي ===== */
-.hearts-islamic-text {
-  font-family: "Tajawal", "Amiri", serif !important;
-  font-style: italic;
-  font-size: 22px;
-  color: rgba(0,0,0,0.85);
-  text-align: center;
-  line-height: 2;
-  margin: 20px auto;
-
-  /* وميض حقيقي */
-  animation: islamic-blink 1.5s infinite;
-}
-
-@keyframes islamic-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
