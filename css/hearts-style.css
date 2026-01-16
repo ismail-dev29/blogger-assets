@@ -142,25 +142,13 @@
 .hearts-info-pro p {
   @apply text-blue-600 text-lg;
   }
-/* ====== نص إسلامي مائل مع وميض ====== */
+/* ===== نص إسلامي احترافي متوافق مع Opera Mini ===== */
 .hearts-islamic-text {
-  display: block;
-  margin: 25px auto;
-  text-align: center;
-
-  font-family: "Amiri", serif;
-  font-style: italic;
+  font-family: "Amiri", "Traditional Arabic", "Arial", serif !important;
   font-size: 22px;
-
-  color: rgba(0, 0, 0, 0.65);
-  line-height: 1.9;
-
-  animation: hearts-blink 2.5s ease-in-out infinite;
-}
-
-/* وميض بسيط */
-@keyframes hearts-blink {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
-}
+  font-style: italic;
+  color: rgba(0,0,0,0.75);
+  text-align: center;
+  margin: 20px auto;
+  line-height: 2;
+  }
