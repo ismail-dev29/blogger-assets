@@ -142,17 +142,22 @@
 .hearts-info-pro p {
   @apply text-blue-600 text-lg;
   }
-/* ===== نص إسلامي احترافي متوافق مع Opera Mini ===== */
+/* ===== نص إسلامي مع وميض آمن ===== */
 .hearts-islamic-text {
-  font-family: "Amiri", "Traditional Arabic", "Arial", serif !important;
-  font-size: 22px;
+  font-family: "Tajawal", "Amiri", serif !important; /* Tajawal للمدونة, Amiri للآيات */
   font-style: italic;
+  font-size: 22px;
   color: rgba(0,0,0,0.75);
   text-align: center;
-  margin: 20px auto;
   line-height: 2;
-  }
-/* ===== اختبار إجباري ===== */
-body {
-  background: red !important;
+  margin: 20px auto;
+
+  /* إعداد الوميض */
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+/* تأثير وميض عند المرور بالماوس */
+.hearts-islamic-text:hover {
+  opacity: 0.4; /* النص يختفي جزئيًا عند المرور */
 }
