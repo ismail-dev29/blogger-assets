@@ -118,3 +118,15 @@
 .hearts-download-btn-blue:hover {
   @apply bg-blue-700 scale-105;
 }
+/* ====== نص احترافي ====== */
+.hearts-text-pro {
+  @apply text-lg leading-relaxed text-gray-800 bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm my-5;
+}
+
+.hearts-text-pro strong {
+  @apply text-blue-700 font-bold;
+}
+
+.hearts-text-pro em {
+  @apply text-gray-600 italic;
+}
