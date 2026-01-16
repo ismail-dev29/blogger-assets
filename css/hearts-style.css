@@ -142,3 +142,25 @@
 .hearts-info-pro p {
   @apply text-blue-600 text-lg;
   }
+/* ====== نص إسلامي مائل مع وميض ====== */
+.hearts-islamic-text {
+  display: block;
+  margin: 25px auto;
+  text-align: center;
+
+  font-family: "Amiri", "Scheherazade", serif; /* خط إسلامي */
+  font-style: italic;
+  font-size: 22px;
+
+  color: rgba(0, 0, 0, 0.65); /* رصاصي شفاف */
+  line-height: 1.9;
+
+  animation: hearts-fade-blink 2.5s infinite ease-in-out;
+}
+
+/* وميض خفيف (متوافق نسبيًا مع Opera Mini) */
+@keyframes hearts-fade-blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1; }
+}
