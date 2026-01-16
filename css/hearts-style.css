@@ -148,19 +148,19 @@
   margin: 25px auto;
   text-align: center;
 
-  font-family: "Amiri", "Scheherazade", serif; /* خط إسلامي */
+  font-family: "Amiri", serif;
   font-style: italic;
   font-size: 22px;
 
-  color: rgba(0, 0, 0, 0.65); /* رصاصي شفاف */
+  color: rgba(0, 0, 0, 0.65);
   line-height: 1.9;
 
-  animation: hearts-fade-blink 2.5s infinite ease-in-out;
+  animation: hearts-blink 2.5s ease-in-out infinite;
 }
 
-/* وميض خفيف (متوافق نسبيًا مع Opera Mini) */
-@keyframes hearts-fade-blink {
-  0%   { opacity: 1; }
-  50%  { opacity: 0.5; }
+/* وميض بسيط */
+@keyframes hearts-blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
   100% { opacity: 1; }
 }
