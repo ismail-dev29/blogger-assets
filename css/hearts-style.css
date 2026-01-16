@@ -132,3 +132,50 @@
   color: #2b55a8;
   margin-bottom: 15px;
 }
+
+/* ======= أشكال إضافية ======= */
+
+/* ----- دائرة ----- */
+.hearts-circle {
+  width: 150px;
+  height: 150px;
+  background: #2b55a8;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ----- مربعات ملونة ----- */
+.hearts-square-red {
+  width: 200px;
+  height: 200px;
+  background: #ff4c4c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 20px auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hearts-square-green {
+  width: 200px;
+  height: 200px;
+  background: #28a745;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 20px auto;
+  font-weight: bold;
+  text-align: center;
+    }
