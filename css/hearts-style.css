@@ -182,3 +182,41 @@
 .hearts-share-text a:hover {
   color: rgba(0,0,0,0.85);
 }
+/* ===== عداد دائري احترافي ===== */
+.hearts-circle-timer {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  margin: 40px auto;
+}
+
+.hearts-circle-timer svg {
+  transform: rotate(-90deg);
+}
+
+.hearts-circle-bg {
+  stroke: #2563eb; /* أزرق */
+  stroke-width: 12;
+  fill: none;
+}
+
+.hearts-circle-progress {
+  stroke: #ffffff;
+  stroke-width: 8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 565;
+  stroke-dashoffset: 565;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.hearts-circle-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: Tajawal, sans-serif;
+}
