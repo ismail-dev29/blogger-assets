@@ -1,10 +1,11 @@
 /* ====== Hearts Library for Blogger (Pure CSS) ====== */
 
-/* ----- العمود الرئيسي للمقال ----- */
+/* ----- العمود الرئيسي للمقال (تم التعديل للمظهر الواسع) ----- */
 .post-body,
 .entry-content,
 .item-post-resizer {
-  max-width: 42rem;
+  width: 100%; /* العودة للعرض الكامل */
+  max-width: 100%; /* إلغاء الضغط الذي سببه 42rem */
   margin: 20px auto;
   background: #F4F9FF;
   padding: 32px;
@@ -268,21 +269,21 @@
   font-weight:bold;
   color:#ffffff;
   font-family:Tajawal,sans-serif;
-  }
+}
 /* ======================================
    Hearts – Smooth Fade Text (One Time)
 ====================================== */
 
 .hearts-fade-once {
   opacity: 0;
-  color: rgba(0, 0, 0, 0.55); /* رصاصي شفاف */
+  color: rgba(0, 0, 0, 0.55); 
   font-size: 20px;
   text-align: center;
   margin: 25px 0;
   animation: heartsFadeOnce 2.5s ease-out forwards;
 }
 
-/*  خط إسلامي */
+/* خط إسلامي */
 .hearts-fade-once.islamic {
   font-family: 'Amiri', serif;
   font-style: italic;
@@ -304,4 +305,4 @@
   color: rgba(0,0,0,.55);
   font-size: 20px;
   text-align: center;
-} 
+}
