@@ -269,3 +269,33 @@
   color:#ffffff;
   font-family:Tajawal,sans-serif;
   }
+/* ======================================
+   Hearts – Smooth Fade Text (One Time)
+====================================== */
+
+.hearts-fade-once {
+  opacity: 0;
+  color: rgba(0, 0, 0, 0.55); /* رصاصي شفاف */
+  font-size: 20px;
+  text-align: center;
+  margin: 25px 0;
+  animation: heartsFadeOnce 2.5s ease-out forwards;
+}
+
+/*  خط إسلامي */
+.hearts-fade-once.islamic {
+  font-family: 'Amiri', serif;
+  font-style: italic;
+}
+
+/* الحركة نفسها */
+@keyframes heartsFadeOnce {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
