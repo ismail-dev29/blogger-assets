@@ -306,3 +306,22 @@
   font-size: 20px;
   text-align: center;
 }
+/* تنسيق الصندوق المرن - موقع قلوب */
+.qulub-box {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-right-width: 5px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.qulub-box-title {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.15rem;
+}
+
