@@ -299,3 +299,9 @@
     transform: translateY(0);
   }
 }
+/*خط رصاصي هاديء*/
+.hearts-gray {
+  color: rgba(0,0,0,.55);
+  font-size: 20px;
+  text-align: center;
+} 
