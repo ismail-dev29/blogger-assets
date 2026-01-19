@@ -1,34 +1,59 @@
-/* ====== Hearts Library for Blogger (Pure CSS) ====== */
+/* ====== Hearts Library - Standard Post Layout (Centered & Bold) ====== */
 
-/* ----- العمود الرئيسي للمقال (تم التعديل للمظهر الواسع) ----- */
 .post-body,
-.entry-content,
-.item-post-resizer {
-  width: 100%; /* العودة للعرض الكامل */
-  max-width: 100%; /* إلغاء الضغط الذي سببه 42rem */
-  margin: 20px auto;
-  background: #F6F9FE;
-  padding: 32px;
-  line-height: 1.9;
-  font-size: 18px;
-  text-align: center;
-  word-break: break-word;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+.entry-content {
+  width: 100% !important;
+  max-width: 800px !important; /* عرض مريح للعين يشبه الصور المرفقة */
+  margin: 0 auto !important;
+  background: transparent !important; /* جعل الخلفية بيضاء بسيطة كالمعاينة */
+  padding: 20px !important;
+  line-height: 1.6 !important; /* مسافة بين الأسطر متناسقة */
+  font-size: 24px !important; /* تكبير الخط كما طلبت */
+  color: #333333 !important;
+  text-align: center !important; /* توسيط كل النصوص */
+  word-wrap: break-word !important;
 }
 
-/* الفقرات والقوائم */
+/* تنسيق العناوين لتكون كبيرة وواضحة في المنتصف */
+.post-body h1, .post-body h2, .post-body h3 {
+  font-size: 28px !important;
+  font-weight: bold !important;
+  color: #2c3e50 !important;
+  margin: 30px 0 20px 0 !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+/* تنسيق الفقرات لضمان التوسيط */
 .post-body p {
-  margin-bottom: 20px;
+  margin-bottom: 25px !important;
+  display: block !important;
+  text-align: center !important;
 }
-.post-body ul,
-.post-body ol {
-  padding-right: 20px;
-  margin-bottom: 16px;
+
+/* إصلاح القوائم لتظهر في المنتصف بدون إزاحة يمين */
+.post-body ul, .post-body ol {
+  padding: 0 !important;
+  margin: 20px auto !important;
+  list-style-position: inside !important;
+  text-align: center !important;
+  display: inline-block !important; /* يضمن توسيط الكتلة نفسها */
+  width: auto !important;
 }
+
 .post-body li {
-  margin-bottom: 8px;
+  margin-bottom: 12px !important;
+  text-align: center !important;
 }
+
+/* تعديل الخط الرمادي الموسط (مثل Hearts Gray) */
+.hearts-gray {
+  color: #7f8c8d !important;
+  font-size: 22px !important;
+  text-align: center !important;
+  margin: 20px 0 !important;
+}
+
 
 /* ----- مربعات عامة ----- */
 .hearts-box {
@@ -347,11 +372,4 @@
     opacity: 0;
     filter: blur(6px);
   }
-  }
-/* تصحيح اتجاه النص العربي بدون تغيير التصميم */
-.post-body,
-.entry-content,
-.item-post-resizer {
-  direction: rtl;
-  unicode-bidi: plaintext;
   }
