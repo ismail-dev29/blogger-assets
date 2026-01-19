@@ -325,3 +325,26 @@
     font-size: 1.15rem;
 }
 
+/* نص ضبابي متحرك */
+.hearts-blur-text {
+  color: rgba(0,0,0,.55);
+  font-size: 20px;
+  text-align: center;
+  margin: 25px 0;
+  animation: heartsBlurFade 3s ease-in-out infinite;
+}
+
+@keyframes heartsBlurFade {
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(6px);
+  }
+}
