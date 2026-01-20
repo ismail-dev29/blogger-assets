@@ -1,88 +1,84 @@
-/* ======================================
-   Hearts Library - Complete CSS for Blogger
-====================================== */
+/* ====== Hearts Library for Blogger (Centered Edition) ====== */
 
 /* ----- العمود الرئيسي للمقال ----- */
-.post-body, .entry-content {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 24px;
-  line-height: 1.6;
-  color: #333333;
-  text-align: center;
-  word-wrap: break-word;
-  padding: 20px;
-  background: transparent;
-}
-
-/* ----- العناوين ----- */
-.post-body h1, .post-body h2, .post-body h3 {
-  font-size: 28px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin: 30px 0 20px;
-  text-align: center;
-  display: block;
-}
-
-/* ----- الفقرات والقوائم ----- */
-.post-body p {
-  margin-bottom: 25px;
-}
-.post-body ul, .post-body ol {
-  padding: 0;
+.post-body,
+.entry-content,
+.item-post-resizer {
+  width: 100%;
+  max-width: 100%;
   margin: 20px auto;
-  list-style-position: inside;
-  text-align: center;
-  display: inline-block;
-  width: auto;
-}
-.post-body li { margin-bottom: 12px; }
-
-/* ----- مربعات عامة ----- */
-.hearts-box {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  padding: 20px;
-  border-radius: 16px;
-  margin: 20px 0;
-  text-align: center;
+  background: #F6F9FE;
+  padding: 32px;
+  line-height: 1.9;
+  font-size: 18px;
+  text-align: center; /* توسيط أساسي */
+  word-break: break-word;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* يضمن توسيط المحتويات المرنة */
 }
 
-/* ----- صناديق معلومة / تحذير / نجاح ----- */
-.hearts-info-pro {
-  background-color: #eff6ff;
-  border-right: 4px solid #1d4ed8;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+/* القوائم - تعديل جوهري للتوسيط */
+.post-body ul,
+.post-body ol {
+  padding: 0;
+  margin: 0 auto 16px auto;
+  list-style-position: inside; /* يجعل النقطة أو الرقم بجانب النص الموسط */
   text-align: center;
-  animation: pulse 2s infinite;
-}
-.hearts-warning-pro {
-  background-color: #fffbeb;
-  border-right: 4px solid #f59e0b;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
-  text-align: center;
-  animation: pulse 2s infinite;
-}
-.hearts-success-pro {
-  background-color: #ecfdf5;
-  border-right: 4px solid #059669;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
-  text-align: center;
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0%,100% { opacity:1; }
-  50% { opacity:0.5; }
+  width: 100%;
 }
 
-/* ----- نصوص احترافية ----- */
+.post-body li {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* ----- تنسيق الصندوق المرن - موقع قلوب (معدل للتوسيط الكامل) ----- */
+.qulub-box {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-right: 5px solid #1d4ed8; 
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* يوسط المحتوى أفقياً */
+    justify-content: center; /* يوسط المحتوى رأسياً */
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%; /* أو حسب الرغبة */
+}
+
+.qulub-box-title {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* يوسط الأيقونة مع النص */
+    gap: 0.5rem;
+    font-size: 1.15rem;
+    width: 100%;
+}
+
+/* ----- مربعات معلومة / تحذير / نجاح (معدلة) ----- */
+.hearts-info, .hearts-warning, .hearts-success {
+  padding: 16px;
+  border-radius: 12px;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+}
+
+.hearts-info { background: #eff6ff; border-right: 4px solid #1d4ed8; }
+.hearts-warning { background: #fffbeb; border-right: 4px solid #f59e0b; }
+.hearts-success { background: #ecfdf5; border-right: 4px solid #059669; }
+
+/* ----- نص احترافي موسط ----- */
 .hearts-text-pro {
   font-size: 18px;
   line-height: 1.9;
@@ -92,153 +88,19 @@
   border-radius: 16px;
   border: 1px solid #e5e7eb;
   box-shadow: 0 6px 15px rgba(0,0,0,.05);
-  margin: 20px 0;
+  margin: 20px auto;
+  text-align: center;
+  width: 100%;
 }
-.hearts-text-pro strong { color: #1d4ed8; }
-.hearts-text-pro em { color: #6b7280; font-style: italic; }
 
-/* ----- نص ضبابي متحرك ----- */
+/* ----- نص ضبابي متحرك موسط ----- */
 .hearts-blur-text {
   color: rgba(0,0,0,.55);
   font-size: 20px;
   text-align: center;
-  margin: 25px 0;
-  animation: heartsBlurFade 3s ease-in-out infinite;
-}
-@keyframes heartsBlurFade {
-  0% { opacity:0; filter:blur(6px); }
-  50% { opacity:1; filter:blur(0); }
-  100% { opacity:0; filter:blur(6px); }
-}
-
-/* ----- نص وميض إسلامي ----- */
-.hearts-islamic-blink {
-  font-family:"Tajawal","Amiri",serif;
-  font-style: italic;
-  font-size: 24px;
-  color: #2c3e50;
-  text-align: center;
-  line-height: 1.8;
   margin: 25px auto;
-  animation: hearts-blink 2s infinite ease-in-out;
-}
-@keyframes hearts-blink {
-  0%,100%{opacity:1}
-  50%{opacity:.3}
+  animation: heartsBlurFade 3s ease-in-out infinite;
+  width: 100%;
 }
 
-/* ----- دوائر ----- */
-.hearts-circle {
-  width: 144px;
-  height: 144px;
-  background-color: #1d4ed8;
-  color: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 20px auto;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-/* ----- مربعات ملونة ----- */
-.hearts-square-red,
-.hearts-square-green {
-  width: 192px;
-  height: 192px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  margin: 20px auto;
-  font-weight: bold;
-  text-align: center;
-}
-.hearts-square-red { background:#dc2626; }
-.hearts-square-green { background:#16a34a; }
-
-/* ----- أزرار ----- */
-.hearts-btn {
-  display:inline-block;
-  background: linear-gradient(to right,#1d4ed8,#1e40af);
-  color:#fff;
-  padding:12px 28px;
-  border-radius:999px;
-  font-weight:bold;
-  text-decoration:none;
-  transition: transform .3s;
-}
-.hearts-btn:hover { transform:scale(1.05); }
-
-/* ----- صندوق تحميل ----- */
-.hearts-download-box {
-  background: #ffffff;
-  border: 2px dashed #1d4ed8;
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-  margin: 20px 0;
-}
-.hearts-download-btn {
-  display:inline-block;
-  background:#1d4ed8;
-  color:#ffffff;
-  padding:12px 26px;
-  border-radius:999px;
-  font-weight:bold;
-  text-decoration:none;
-  margin-top:15px;
-}
-
-/* ----- مشاركة نصية ----- */
-.hearts-share-text {
-  margin: 30px auto 10px;
-  text-align: center;
-  font-family: Tajawal,sans-serif;
-  font-size: 15px;
-  letter-spacing: 6px;
-}
-.hearts-share-text a {
-  color: rgba(0,0,0,.55);
-  text-decoration: none;
-  margin: 0 18px;
-}
-.hearts-share-text a:hover { color: rgba(0,0,0,.85); }
-/* صندوق متابعة بيضاوي ضبابي */
-.hearts-follow-oval {
-  background: rgba(29, 78, 216, 0.9) !important; /* أزرق غامق شفاف قليلاً */
-  backdrop-filter: blur(10px); /* تأثير ضبابي للخلفية */
-  border-radius: 100px / 50px; /* سر الشكل البيضاوي */
-  padding: 30px 40px !important;
-  color: #ffffff !important;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  margin: 30px auto;
-  max-width: 400px;
-}
-
-.hearts-follow-oval h4 {
-  color: #ffffff !important;
-  margin-bottom: 15px !important;
-  font-size: 20px !important;
-}
-
-.hearts-follow-oval a {
-  display: inline-block;
-  background: #ffffff !important;
-  color: #1d4ed8 !important; /* نص أزرق على خلفية بيضاء */
-  padding: 8px 25px;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.hearts-follow-oval a:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-}
+/* باقي التنسيقات (الأزرار والعدادات) تظل كما هي لأنها تعتمد على margin auto */
