@@ -1,59 +1,43 @@
-/* ====== Hearts Library - Standard Post Layout (Centered & Bold) ====== */
+/* ======================================
+   Hearts Library - Complete CSS for Blogger
+====================================== */
 
-.post-body,
-.entry-content {
-  width: 100% !important;
-  max-width: 800px !important; /* عرض مريح للعين يشبه الصور المرفقة */
-  margin: 0 auto !important;
-  background: transparent !important; /* جعل الخلفية بيضاء بسيطة كالمعاينة */
-  padding: 20px !important;
-  line-height: 1.6 !important; /* مسافة بين الأسطر متناسقة */
-  font-size: 24px !important; /* تكبير الخط كما طلبت */
-  color: #333333 !important;
-  text-align: center !important; /* توسيط كل النصوص */
-  word-wrap: break-word !important;
+/* ----- العمود الرئيسي للمقال ----- */
+.post-body, .entry-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 1.6;
+  color: #333333;
+  text-align: center;
+  word-wrap: break-word;
+  padding: 20px;
+  background: transparent;
 }
 
-/* تنسيق العناوين لتكون كبيرة وواضحة في المنتصف */
+/* ----- العناوين ----- */
 .post-body h1, .post-body h2, .post-body h3 {
-  font-size: 28px !important;
-  font-weight: bold !important;
-  color: #2c3e50 !important;
-  margin: 30px 0 20px 0 !important;
-  text-align: center !important;
-  display: block !important;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 30px 0 20px;
+  text-align: center;
+  display: block;
 }
 
-/* تنسيق الفقرات لضمان التوسيط */
+/* ----- الفقرات والقوائم ----- */
 .post-body p {
-  margin-bottom: 25px !important;
-  display: block !important;
-  text-align: center !important;
+  margin-bottom: 25px;
 }
-
-/* إصلاح القوائم لتظهر في المنتصف بدون إزاحة يمين */
 .post-body ul, .post-body ol {
-  padding: 0 !important;
-  margin: 20px auto !important;
-  list-style-position: inside !important;
-  text-align: center !important;
-  display: inline-block !important; /* يضمن توسيط الكتلة نفسها */
-  width: auto !important;
+  padding: 0;
+  margin: 20px auto;
+  list-style-position: inside;
+  text-align: center;
+  display: inline-block;
+  width: auto;
 }
-
-.post-body li {
-  margin-bottom: 12px !important;
-  text-align: center !important;
-}
-
-/* تعديل الخط الرمادي الموسط (مثل Hearts Gray) */
-.hearts-gray {
-  color: #7f8c8d !important;
-  font-size: 22px !important;
-  text-align: center !important;
-  margin: 20px 0 !important;
-}
-
+.post-body li { margin-bottom: 12px; }
 
 /* ----- مربعات عامة ----- */
 .hearts-box {
@@ -65,107 +49,89 @@
   text-align: center;
 }
 
-/* ----- مربعات معلومة / تحذير / نجاح ----- */
-.hearts-info {
-  background: #eff6ff;
+/* ----- صناديق معلومة / تحذير / نجاح ----- */
+.hearts-info-pro {
+  background-color: #eff6ff;
   border-right: 4px solid #1d4ed8;
-  padding: 16px;
-  border-radius: 12px;
-  margin: 20px 0;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  text-align: center;
+  animation: pulse 2s infinite;
 }
-.hearts-warning {
-  background: #fffbeb;
+.hearts-warning-pro {
+  background-color: #fffbeb;
   border-right: 4px solid #f59e0b;
-  padding: 16px;
-  border-radius: 12px;
-  margin: 20px 0;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  text-align: center;
+  animation: pulse 2s infinite;
 }
-.hearts-success {
-  background: #ecfdf5;
+.hearts-success-pro {
+  background-color: #ecfdf5;
   border-right: 4px solid #059669;
-  padding: 16px;
-  border-radius: 12px;
-  margin: 20px 0;
-}
-
-/* ----- بطاقات المحتوى ----- */
-.hearts-grid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin: 20px 0;
-}
-.hearts-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
   text-align: center;
-  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity:1; }
+  50% { opacity:0.5; }
 }
 
-/* ----- خلفيات ----- */
-.hearts-bg-light {
-  background: linear-gradient(135deg,#f3f4f6,#e5e7eb);
-  padding: 24px;
-  border-radius: 16px;
-}
-.hearts-bg-dark {
-  background: #111827;
-  color: #ffffff;
-  padding: 24px;
-  border-radius: 16px;
-}
-
-/* ----- أزرار ----- */
-.hearts-btn {
-  display: inline-block;
-  background: linear-gradient(to right,#1d4ed8,#1e40af);
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 999px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: transform .3s;
-}
-.hearts-btn:hover {
-  transform: scale(1.05);
-}
-
-/* ----- صندوق تحميل ----- */
-.hearts-download-box {
-  background: #ffffff;
-  border: 2px dashed #1d4ed8;
-  border-radius: 16px;
+/* ----- نصوص احترافية ----- */
+.hearts-text-pro {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #1f2937;
+  background: #f9fafb;
   padding: 20px;
-  text-align: center;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 15px rgba(0,0,0,.05);
   margin: 20px 0;
 }
-.hearts-download-btn {
-  display: inline-block;
-  background: #1d4ed8;
-  color: #ffffff;
-  padding: 12px 26px;
-  border-radius: 999px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 15px;
+.hearts-text-pro strong { color: #1d4ed8; }
+.hearts-text-pro em { color: #6b7280; font-style: italic; }
+
+/* ----- نص ضبابي متحرك ----- */
+.hearts-blur-text {
+  color: rgba(0,0,0,.55);
+  font-size: 20px;
+  text-align: center;
+  margin: 25px 0;
+  animation: heartsBlurFade 3s ease-in-out infinite;
+}
+@keyframes heartsBlurFade {
+  0% { opacity:0; filter:blur(6px); }
+  50% { opacity:1; filter:blur(0); }
+  100% { opacity:0; filter:blur(6px); }
 }
 
-/* ----- عناوين داخل الصناديق ----- */
-.hearts-box h2,
-.hearts-info h2,
-.hearts-warning h2,
-.hearts-success h2 {
+/* ----- نص وميض إسلامي ----- */
+.hearts-islamic-blink {
+  font-family:"Tajawal","Amiri",serif;
+  font-style: italic;
   font-size: 24px;
-  color: #1d4ed8;
-  margin-bottom: 15px;
+  color: #2c3e50;
+  text-align: center;
+  line-height: 1.8;
+  margin: 25px auto;
+  animation: hearts-blink 2s infinite ease-in-out;
+}
+@keyframes hearts-blink {
+  0%,100%{opacity:1}
+  50%{opacity:.3}
 }
 
-/* ----- دائرة ----- */
+/* ----- دوائر ----- */
 .hearts-circle {
   width: 144px;
   height: 144px;
-  background: #1d4ed8;
+  background-color: #1d4ed8;
   color: #ffffff;
   border-radius: 50%;
   display: flex;
@@ -194,182 +160,50 @@
 .hearts-square-red { background:#dc2626; }
 .hearts-square-green { background:#16a34a; }
 
-/* ----- صناديق متقدمة ----- */
-.hearts-success-green {
-  background:#ecfdf5;
-  border-right:4px solid #16a34a;
-  padding:24px;
-  border-radius:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,.08);
-  margin:20px 0;
+/* ----- أزرار ----- */
+.hearts-btn {
+  display:inline-block;
+  background: linear-gradient(to right,#1d4ed8,#1e40af);
+  color:#fff;
+  padding:12px 28px;
+  border-radius:999px;
+  font-weight:bold;
+  text-decoration:none;
+  transition: transform .3s;
 }
-.hearts-warning-yellow {
-  background:#fffbeb;
-  border-right:4px solid #f59e0b;
-  padding:24px;
-  border-radius:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,.08);
-  margin:20px 0;
-}
+.hearts-btn:hover { transform:scale(1.05); }
 
-/* ----- نص احترافي ----- */
-.hearts-text-pro {
-  font-size:18px;
-  line-height:1.9;
-  color:#1f2937;
-  background:#f9fafb;
-  padding:20px;
-  border-radius:16px;
-  border:1px solid #e5e7eb;
-  box-shadow:0 6px 15px rgba(0,0,0,.05);
-  margin:20px 0;
+/* ----- صندوق تحميل ----- */
+.hearts-download-box {
+  background: #ffffff;
+  border: 2px dashed #1d4ed8;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
 }
-.hearts-text-pro strong { color:#1d4ed8; }
-.hearts-text-pro em { color:#6b7280; font-style:italic; }
-
-/* ----- وميض إسلامي ----- */
-.hearts-islamic-blink {
-  font-family:"Tajawal","Amiri",serif;
-  font-style:italic;
-  font-size:24px;
-  color:#2c3e50;
-  text-align:center;
-  line-height:1.8;
-  margin:25px auto;
-  animation:hearts-blink 2s infinite ease-in-out;
-}
-
-@keyframes hearts-blink {
-  0%,100%{opacity:1}
-  50%{opacity:.3}
+.hearts-download-btn {
+  display:inline-block;
+  background:#1d4ed8;
+  color:#ffffff;
+  padding:12px 26px;
+  border-radius:999px;
+  font-weight:bold;
+  text-decoration:none;
+  margin-top:15px;
 }
 
 /* ----- مشاركة نصية ----- */
 .hearts-share-text {
-  margin:30px auto 10px;
-  text-align:center;
-  font-family:Tajawal,sans-serif;
-  font-size:15px;
-  letter-spacing:6px;
+  margin: 30px auto 10px;
+  text-align: center;
+  font-family: Tajawal,sans-serif;
+  font-size: 15px;
+  letter-spacing: 6px;
 }
 .hearts-share-text a {
-  color:rgba(0,0,0,.55);
-  text-decoration:none;
-  margin:0 18px;
-}
-.hearts-share-text a:hover {
-  color:rgba(0,0,0,.85);
-}
-
-/* ----- عداد دائري ----- */
-.hearts-circle-timer {
-  width:180px;
-  height:180px;
-  position:relative;
-  margin:40px auto;
-}
-.hearts-circle-timer svg {
-  transform:rotate(-90deg);
-}
-.hearts-circle-bg {
-  stroke:#2563eb;
-  stroke-width:12;
-  fill:none;
-}
-.hearts-circle-progress {
-  stroke:#ffffff;
-  stroke-width:8;
-  fill:none;
-  stroke-linecap:round;
-  stroke-dasharray:565;
-  stroke-dashoffset:565;
-  transition:stroke-dashoffset 1s linear;
-}
-.hearts-circle-number {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  font-size:32px;
-  font-weight:bold;
-  color:#ffffff;
-  font-family:Tajawal,sans-serif;
-}
-/* ======================================
-   Hearts – Smooth Fade Text (One Time)
-====================================== */
-
-.hearts-fade-once {
-  opacity: 0;
-  color: rgba(0, 0, 0, 0.55); 
-  font-size: 20px;
-  text-align: center;
-  margin: 25px 0;
-  animation: heartsFadeOnce 2.5s ease-out forwards;
-}
-
-/* خط إسلامي */
-.hearts-fade-once.islamic {
-  font-family: 'Amiri', serif;
-  font-style: italic;
-}
-
-/* الحركة نفسها */
-@keyframes heartsFadeOnce {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/*خط رصاصي هاديء*/
-.hearts-gray {
   color: rgba(0,0,0,.55);
-  font-size: 20px;
-  text-align: center;
+  text-decoration: none;
+  margin: 0 18px;
 }
-/* تنسيق الصندوق المرن - موقع قلوب */
-.qulub-box {
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    border-right-width: 5px;
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-.qulub-box-title {
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.15rem;
-}
-
-/* نص ضبابي متحرك */
-.hearts-blur-text {
-  color: rgba(0,0,0,.55);
-  font-size: 20px;
-  text-align: center;
-  margin: 25px 0;
-  animation: heartsBlurFade 3s ease-in-out infinite;
-}
-
-@keyframes heartsBlurFade {
-  0% {
-    opacity: 0;
-    filter: blur(6px);
-  }
-  50% {
-    opacity: 1;
-    filter: blur(0);
-  }
-  100% {
-    opacity: 0;
-    filter: blur(6px);
-  }
-  }
+.hearts-share-text a:hover { color: rgba(0,0,0,.85); }
