@@ -6,10 +6,10 @@
 .post-body, .entry-content {
   max-width: 800px;
   margin: 0 auto;
-  font-size: 24px;
-  line-height: 1.6;
+  font-size: 16px; /* المقاس المطلوب كما في الصورة */
+  line-height: 1.8; /* زيادة المسافة قليلاً لراحة العين مع الخط الصغير */
   color: #333333;
-  text-align: center;
+  text-align: right; /* محاذاة لليمين مثل المواقع الاحترافية */
   word-wrap: break-word;
   padding: 20px;
   background: transparent;
@@ -17,193 +17,118 @@
 
 /* ----- العناوين ----- */
 .post-body h1, .post-body h2, .post-body h3 {
-  font-size: 28px;
+  font-size: 20px; /* تصغير العنوان ليتناسب مع نص 16px */
   font-weight: bold;
   color: #2c3e50;
-  margin: 30px 0 20px;
-  text-align: center;
+  margin: 25px 0 15px;
+  text-align: right;
   display: block;
 }
 
 /* ----- الفقرات والقوائم ----- */
 .post-body p {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .post-body ul, .post-body ol {
   padding: 0;
-  margin: 20px auto;
+  margin: 15px auto;
   list-style-position: inside;
-  text-align: center;
-  display: inline-block;
+  text-align: right;
   width: auto;
 }
-.post-body li { margin-bottom: 12px; }
+.post-body li { margin-bottom: 8px; }
 
 /* ----- مربعات عامة ----- */
 .hearts-box {
   background: #f9fafb;
   border: 1px solid #e5e7eb;
-  padding: 20px;
-  border-radius: 16px;
+  padding: 15px;
+  border-radius: 12px;
   margin: 20px 0;
-  text-align: center;
+  text-align: right;
+  font-size: 15px; /* أصغر قليلاً من النص العام للتميز */
 }
 
 /* ----- صناديق معلومة / تحذير / نجاح ----- */
-.hearts-info-pro {
-  background-color: #eff6ff;
-  border-right: 4px solid #1d4ed8;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
-  text-align: center;
-  animation: pulse 2s infinite;
+.hearts-info-pro, .hearts-warning-pro, .hearts-success-pro {
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,.05);
+  text-align: right;
+  font-size: 15px;
+  margin: 20px 0;
 }
-.hearts-warning-pro {
-  background-color: #fffbeb;
-  border-right: 4px solid #f59e0b;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
-  text-align: center;
-  animation: pulse 2s infinite;
-}
-.hearts-success-pro {
-  background-color: #ecfdf5;
-  border-right: 4px solid #059669;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
-  text-align: center;
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0%,100% { opacity:1; }
-  50% { opacity:0.5; }
-}
+.hearts-info-pro { background-color: #eff6ff; border-right: 4px solid #1d4ed8; }
+.hearts-warning-pro { background-color: #fffbeb; border-right: 4px solid #f59e0b; }
+.hearts-success-pro { background-color: #ecfdf5; border-right: 4px solid #059669; }
 
 /* ----- نصوص احترافية ----- */
 .hearts-text-pro {
-  font-size: 18px;
-  line-height: 1.9;
+  font-size: 15px;
+  line-height: 1.7;
   color: #1f2937;
   background: #f9fafb;
-  padding: 20px;
-  border-radius: 16px;
+  padding: 18px;
+  border-radius: 12px;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 6px 15px rgba(0,0,0,.05);
   margin: 20px 0;
-}
-.hearts-text-pro strong { color: #1d4ed8; }
-.hearts-text-pro em { color: #6b7280; font-style: italic; }
-
-/* ----- نص ضبابي متحرك ----- */
-.hearts-blur-text {
-  color: rgba(0,0,0,.55);
-  font-size: 20px;
-  text-align: center;
-  margin: 25px 0;
-  animation: heartsBlurFade 3s ease-in-out infinite;
-}
-@keyframes heartsBlurFade {
-  0% { opacity:0; filter:blur(6px); }
-  50% { opacity:1; filter:blur(0); }
-  100% { opacity:0; filter:blur(6px); }
 }
 
 /* ----- نص وميض إسلامي ----- */
 .hearts-islamic-blink {
-  font-family:"Tajawal","Amiri",serif;
+  font-family: "Tajawal", "Amiri", serif;
   font-style: italic;
-  font-size: 24px;
+  font-size: 19px; /* جعل النص الديني أوضح قليلاً */
   color: #2c3e50;
   text-align: center;
   line-height: 1.8;
   margin: 25px auto;
   animation: hearts-blink 2s infinite ease-in-out;
 }
-@keyframes hearts-blink {
-  0%,100%{opacity:1}
-  50%{opacity:.3}
-}
 
-/* ----- دوائر ----- */
+/* ----- دوائر ومربعات (تم تصغير أبعادها لتناسب الخط الجديد) ----- */
 .hearts-circle {
-  width: 144px;
-  height: 144px;
+  width: 100px;
+  height: 100px;
+  font-size: 14px;
   background-color: #1d4ed8;
   color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   margin: 20px auto;
-  font-weight: bold;
-  font-size: 18px;
 }
 
-/* ----- مربعات ملونة ----- */
-.hearts-square-red,
-.hearts-square-green {
-  width: 192px;
-  height: 192px;
+.hearts-square-red, .hearts-square-green {
+  width: 120px;
+  height: 120px;
+  font-size: 14px;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
+  border-radius: 12px;
   margin: 20px auto;
-  font-weight: bold;
-  text-align: center;
 }
 .hearts-square-red { background:#dc2626; }
 .hearts-square-green { background:#16a34a; }
 
 /* ----- أزرار ----- */
 .hearts-btn {
-  display:inline-block;
+  padding: 10px 22px;
+  font-size: 14px;
+  border-radius: 50px;
+  display: inline-block;
   background: linear-gradient(to right,#1d4ed8,#1e40af);
   color:#fff;
-  padding:12px 28px;
-  border-radius:999px;
-  font-weight:bold;
   text-decoration:none;
-  transition: transform .3s;
-}
-.hearts-btn:hover { transform:scale(1.05); }
-
-/* ----- صندوق تحميل ----- */
-.hearts-download-box {
-  background: #ffffff;
-  border: 2px dashed #1d4ed8;
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-  margin: 20px 0;
-}
-.hearts-download-btn {
-  display:inline-block;
-  background:#1d4ed8;
-  color:#ffffff;
-  padding:12px 26px;
-  border-radius:999px;
-  font-weight:bold;
-  text-decoration:none;
-  margin-top:15px;
 }
 
 /* ----- مشاركة نصية ----- */
 .hearts-share-text {
-  margin: 30px auto 10px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin: 25px auto;
   text-align: center;
-  font-family: Tajawal,sans-serif;
-  font-size: 15px;
-  letter-spacing: 6px;
 }
-.hearts-share-text a {
-  color: rgba(0,0,0,.55);
-  text-decoration: none;
-  margin: 0 18px;
-}
-.hearts-share-text a:hover { color: rgba(0,0,0,.85); }
