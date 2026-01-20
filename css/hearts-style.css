@@ -207,3 +207,38 @@
   margin: 0 18px;
 }
 .hearts-share-text a:hover { color: rgba(0,0,0,.85); }
+/* صندوق متابعة بيضاوي ضبابي */
+.hearts-follow-oval {
+  background: rgba(29, 78, 216, 0.9) !important; /* أزرق غامق شفاف قليلاً */
+  backdrop-filter: blur(10px); /* تأثير ضبابي للخلفية */
+  border-radius: 100px / 50px; /* سر الشكل البيضاوي */
+  padding: 30px 40px !important;
+  color: #ffffff !important;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+  max-width: 400px;
+}
+
+.hearts-follow-oval h4 {
+  color: #ffffff !important;
+  margin-bottom: 15px !important;
+  font-size: 20px !important;
+}
+
+.hearts-follow-oval a {
+  display: inline-block;
+  background: #ffffff !important;
+  color: #1d4ed8 !important; /* نص أزرق على خلفية بيضاء */
+  padding: 8px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hearts-follow-oval a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
