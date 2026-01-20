@@ -1,35 +1,33 @@
-/* =============================
-   Hearts Library - Full Article Layout
-============================= */
+/* ======================================
+   Hearts Library - Final Integrated Version
+====================================== */
 
-/* ----- المقالة العامة ----- */
+/* ----- المقالة العامة - تم إصلاح التشتت ----- */
 .hearts-article {
   font-family: 'Tajawal', sans-serif;
-  font-size: 18px;
+  font-size: 17px; /* الحجم المثالي لمنع المط */
   line-height: 1.8;
   color: #333333;
-  max-width: 850px;
+  max-width: 800px;
   margin: 0 auto;
   direction: rtl;
-  text-align: justify;
+  text-align: right !important; /* المحاذاة الطبيعية لمنع الفراغات الكبيرة */
+  padding: 10px 20px;
 }
 
 /* الفقرات */
 .hearts-article p {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  word-spacing: 0.5px;
 }
 
-/* القوائم */
-.hearts-article ul,
-.hearts-article ol {
-  padding-right: 20px;
-  margin-bottom: 16px;
-  list-style-position: inside;
-}
-
-/* عناصر القائمة */
-.hearts-article li {
-  margin-bottom: 8px;
+/* تنسيق الصور (عادية بدون انحناء) */
+.hearts-article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0px !important; /* لضمان أن الصورة حادة الزوايا */
+  margin: 20px auto;
+  display: block;
 }
 
 /* ----- العناوين ----- */
@@ -37,9 +35,10 @@
 .hearts-article h2,
 .hearts-article h3 {
   font-weight: bold;
-  color: #2c3e50;
-  text-align: center;
-  margin: 30px 0 20px 0;
+  color: #b91c1c; /* اللون الأحمر الاحترافي */
+  text-align: right;
+  margin: 35px 0 20px 0;
+  line-height: 1.4;
 }
 
 /* ----- مربعات عامة ----- */
@@ -53,29 +52,16 @@
 }
 
 /* ----- مربعات معلومة / تحذير / نجاح ----- */
-.hearts-info {
-  background: #eff6ff;
-  border-right: 4px solid #1d4ed8;
-  padding: 16px;
+.hearts-info, .hearts-warning, .hearts-success {
+  padding: 20px;
   border-radius: 12px;
   margin: 20px 0;
+  line-height: 1.7;
 }
 
-.hearts-warning {
-  background: #fffbeb;
-  border-right: 4px solid #f59e0b;
-  padding: 16px;
-  border-radius: 12px;
-  margin: 20px 0;
-}
-
-.hearts-success {
-  background: #ecfdf5;
-  border-right: 4px solid #059669;
-  padding: 16px;
-  border-radius: 12px;
-  margin: 20px 0;
-}
+.hearts-info { background: #eff6ff; border-right: 5px solid #1d4ed8; }
+.hearts-warning { background: #fffbeb; border-right: 5px solid #f59e0b; }
+.hearts-success { background: #ecfdf5; border-right: 5px solid #059669; }
 
 /* صناديق متقدمة */
 .hearts-success-green {
@@ -96,7 +82,7 @@
   margin:20px 0;
 }
 
-/* ----- بطاقات المحتوى ----- */
+/* ----- بطاقات المحتوى (Grid) ----- */
 .hearts-grid {
   display: grid;
   gap: 16px;
@@ -112,7 +98,7 @@
   box-shadow: 0 8px 18px rgba(0,0,0,.08);
 }
 
-/* ----- خلفيات ----- */
+/* ----- خلفيات ملونة ----- */
 .hearts-bg-light {
   background: linear-gradient(135deg,#f3f4f6,#e5e7eb);
   padding: 24px;
@@ -137,10 +123,7 @@
   text-decoration: none;
   transition: transform .3s;
 }
-
-.hearts-btn:hover {
-  transform: scale(1.05);
-}
+.hearts-btn:hover { transform: scale(1.05); }
 
 /* ----- صندوق تحميل ----- */
 .hearts-download-box {
@@ -163,10 +146,10 @@
   margin-top: 15px;
 }
 
-/* ----- دائرة ----- */
+/* ----- الدوائر (تم تصغيرها لتناسب 17px) ----- */
 .hearts-circle {
-  width: 144px;
-  height: 144px;
+  width: 110px;
+  height: 110px;
   background: #1d4ed8;
   color: #ffffff;
   border-radius: 50%;
@@ -175,7 +158,7 @@
   justify-content: center;
   margin: 20px auto;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* ----- نصوص متحركة ----- */
@@ -192,3 +175,11 @@
   50% { opacity: 1; filter: blur(0);}
   100% { opacity: 0; filter: blur(6px);}
 }
+
+/* ----- القوائم ----- */
+.hearts-article ul, .hearts-article ol {
+  padding-right: 30px;
+  margin-bottom: 20px;
+  list-style-position: inside;
+}
+.hearts-article li { margin-bottom: 10px; }
