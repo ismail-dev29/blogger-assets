@@ -1,106 +1,160 @@
-/* ====== Hearts Library for Blogger (Centered Edition) ====== */
+/* ======================================
+   Hearts Library - Final Integrated Version
+====================================== */
 
-/* ----- العمود الرئيسي للمقال ----- */
+/* 1. جسم المقال (تنسيق العمود الرئيسي بلمسة الصور الجيدة) */
 .post-body,
 .entry-content,
-.item-post-resizer {
-  width: 100%;
+.hearts-article,
+.hearts-post-resizer {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #F4F9FF !important; /* اللون الهادئ المريح للعين */
+  padding: 25px;
+  line-height: 1.9; /* تباعد الأسطر الاحترافي */
+  font-size: 17px; /* الحجم المثالي لمنع تشتت الكلمات */
+  color: #222;
+  text-align: right !important;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+  direction: rtl;
+}
+
+/* 2. تنسيق الصور (عادية وحادة الزوايا كما طلبت) */
+.post-body img, .hearts-article img {
   max-width: 100%;
+  height: auto;
+  border-radius: 0px !important;
   margin: 20px auto;
-  background: #F6F9FE;
-  padding: 32px;
-  line-height: 1.9;
-  font-size: 18px;
-  text-align: center; /* توسيط أساسي */
-  word-break: break-word;
+  display: block;
+}
+
+/* 3. العناوين (الحمراء الاحترافية) */
+.post-body h1, .post-body h2, .post-body h3,
+.hearts-article h1, .hearts-article h2, .hearts-article h3 {
+  font-weight: bold;
+  color: #b91c1c; /* الأحمر الغامق المميز */
+  text-align: right;
+  margin: 35px 0 20px 0;
+  line-height: 1.4;
+}
+
+/* 4. الأزرار الزرقاء (تدرج احترافي) */
+.hearts-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(to right,#2563eb,#1e40af) !important;
+  color: #fff !important;
+  border-radius: 999px;
+  text-decoration: none !important;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .3s ease;
+  border: none;
+}
+.hearts-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.hearts-btn-outline {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid #2563eb;
+  color: #2563eb !important;
+  border-radius: 999px;
+  text-decoration: none !important;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+/* 5. صناديق التحميل (Download Box) */
+.hearts-download-box {
+  background: #ffffff;
+  border: 2px dashed #1d4ed8;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  margin: 25px 0;
+}
+
+/* 6. الصناديق والتنبيهات (Boxes & Notes) */
+.hearts-box {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
   border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  margin: 25px 0;
+}
+.hearts-note {
+  background: #fff7ed;
+  border-right: 5px solid #fb923c;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  color: #9a3412;
+}
+
+/* صناديق النجاح والمعلومات */
+.hearts-info { background: #eff6ff; border-right: 5px solid #1d4ed8; padding: 20px; border-radius: 12px; margin: 20px 0; }
+.hearts-success-green { background:#ecfdf5; border-right:4px solid #16a34a; padding:24px; border-radius:16px; margin:20px 0; }
+
+/* 7. الدوائر (تنسيق قلوب الخاص) */
+.hearts-circle {
+  width: 110px;
+  height: 110px;
+  background: #1d4ed8;
+  color: #ffffff !important;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
-  align-items: center; /* يضمن توسيط المحتويات المرنة */
-}
-
-/* القوائم - تعديل جوهري للتوسيط */
-.post-body ul,
-.post-body ol {
-  padding: 0;
-  margin: 0 auto 16px auto;
-  list-style-position: inside; /* يجعل النقطة أو الرقم بجانب النص الموسط */
-  text-align: center;
-  width: 100%;
-}
-
-.post-body li {
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-/* ----- تنسيق الصندوق المرن - موقع قلوب (معدل للتوسيط الكامل) ----- */
-.qulub-box {
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    border-right: 5px solid #1d4ed8; 
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* يوسط المحتوى أفقياً */
-    justify-content: center; /* يوسط المحتوى رأسياً */
-    gap: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 90%; /* أو حسب الرغبة */
-}
-
-.qulub-box-title {
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* يوسط الأيقونة مع النص */
-    gap: 0.5rem;
-    font-size: 1.15rem;
-    width: 100%;
-}
-
-/* ----- مربعات معلومة / تحذير / نجاح (معدلة) ----- */
-.hearts-info, .hearts-warning, .hearts-success {
-  padding: 16px;
-  border-radius: 12px;
-  margin: 20px auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 95%;
-}
-
-.hearts-info { background: #eff6ff; border-right: 4px solid #1d4ed8; }
-.hearts-warning { background: #fffbeb; border-right: 4px solid #f59e0b; }
-.hearts-success { background: #ecfdf5; border-right: 4px solid #059669; }
-
-/* ----- نص احترافي موسط ----- */
-.hearts-text-pro {
-  font-size: 18px;
-  line-height: 1.9;
-  color: #1f2937;
-  background: #f9fafb;
-  padding: 20px;
-  border-radius: 16px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 6px 15px rgba(0,0,0,.05);
   margin: 20px auto;
+  font-weight: bold;
+  font-size: 16px;
   text-align: center;
-  width: 100%;
 }
 
-/* ----- نص ضبابي متحرك موسط ----- */
+/* 8. نصوص متحركة وضبابية */
 .hearts-blur-text {
   color: rgba(0,0,0,.55);
   font-size: 20px;
   text-align: center;
-  margin: 25px auto;
+  margin: 25px 0;
   animation: heartsBlurFade 3s ease-in-out infinite;
-  width: 100%;
+}
+@keyframes heartsBlurFade {
+  0%, 100% { opacity: 0; filter: blur(6px); }
+  50% { opacity: 1; filter: blur(0); }
 }
 
-/* باقي التنسيقات (الأزرار والعدادات) تظل كما هي لأنها تعتمد على margin auto */
+/* 9. الشبكات والبطاقات (Grid System) */
+.hearts-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 20px 0;
+}
+.hearts-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+/* 10. القوائم والتحسين للجوال */
+.hearts-list, .hearts-article ul {
+  padding-right: 30px;
+  margin: 15px 0;
+}
+.hearts-list li { margin-bottom: 8px; list-style: disc; }
+
+@media (max-width: 768px) {
+  .post-body, .entry-content {
+    padding: 18px;
+    font-size: 16px;
+    margin: 10px;
+  }
+}
