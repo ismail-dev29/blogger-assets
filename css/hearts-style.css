@@ -1,74 +1,145 @@
-كود css GitHub  الجديد 
-/* Hearts Site - GitHub Assets */
-/* ================================================= */
-/* 1. تنسيق عمود المقال (البطاقة المركزية) */
-/* ================================================= */
-.post-body, .hearts-article {
-    max-width: 850px !important; /* عرض متناسق جداً للقراءة */
-    margin: 30px auto !important; /* توسيط العمود في منتصف الصفحة */
-    padding: 30px 40px !important; /* مسافات داخلية لحماية النص */
-    background-color: #ffffff !important; 
-    line-height: 1.8 !important;   /* تباعد أسطر مريح كما طلبت */
-    font-size: 17px !important;    /* حجم الخط الذي اخترته */
-    color: #333 !important; 
-    text-align: justify !important; /* جعل النص متناسق ومنتظم من الجانبين */
-    text-justify: inter-word;
-    border: 1px solid #ddd; 
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08); 
-    border-radius: 6px; 
-    box-sizing: border-box;
-    direction: rtl;
+/* =============================
+   Hearts Library - Full Article Layout (Optimized)
+============================= */
+
+/* ----- المقالة العامة ----- */
+.hearts-article {
+  font-family: "Cairo","Tajawal",Tahoma,Arial,sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #333;
+  max-width: 700px;          /* عرض مريح للقراءة */
+  margin: 0 auto;
+  padding: 22px 20px;
+  background: #F6F9FE;       /* خلفية مريحة */
+  border-radius: 14px;
+  direction: rtl;
+  text-align: right;
 }
 
-/* ================================================= */
-/* 2. تنسيق بطاقات تصفح المقالات (أسفل العناوين) */
-/* ================================================= */
-/* هذا الجزء يغير شكل المقالات في الصفحة الرئيسية وصفحات الأقسام */
-.post-outer, .index-post, .item-post {
-    background: #ffffff !important;
-    border-radius: 12px !important;
-    padding: 20px !important;
-    margin-bottom: 25px !important;
-    border: 1px solid #eee !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
-    transition: transform 0.3s ease;
+/* ----- الفقرات ----- */
+.hearts-article p {
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
-.post-outer:hover {
-    transform: translateY(-5px); /* حركة خفيفة عند مرور الماوس */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.07) !important;
+/* ----- القوائم ----- */
+.hearts-article ul,
+.hearts-article ol {
+  padding-right: 20px;
+  margin: 20px 0;
+  list-style-position: inside;
 }
 
-/* ================================================= */
-/* 3. تحسين العناوين (لتبرز كبطاقة حمراء خفيفة) */
-/* ================================================= */
-.post-body h2, .post-body h3 {
-    color: #b91c1c !important; /* اللون الأحمر الفخم */
-    font-weight: bold !important;
-    margin-top: 35px !important;
-    margin-bottom: 15px !important;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #f1f1f1;
+.hearts-article li {
+  margin-bottom: 10px;
 }
 
-/* ================================================= */
-/* 4. تنسيق الصور (عادية وطبيعية) */
-/* ================================================= */
-.post-body img {
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: 0px !important; /* صور حادة الزوايا كما طلبت */
-    margin: 25px auto !important;
-    display: block;
+/* ----- العناوين ----- */
+.hearts-article h1,
+.hearts-article h2,
+.hearts-article h3 {
+  font-weight: 700;
+  color: #1f3a8a;
+  text-align: center;
+  margin: 34px 0 18px;
 }
 
-/* ================================================= */
-/* 5. تحسين الجوال */
-/* ================================================= */
+.hearts-article h2 {
+  border-right: 4px solid #c1121f;
+  padding-right: 12px;
+}
+
+.hearts-article h3 {
+  color: #c1121f;
+}
+
+/* ----- مربعات عامة ----- */
+.hearts-box {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 24px 0;
+  text-align: center;
+}
+
+/* ----- مربعات معلومة / تحذير / نجاح ----- */
+.hearts-info {
+  background: #eff6ff;
+  border-right: 4px solid #1d4ed8;
+  padding: 18px;
+  border-radius: 14px;
+  margin: 24px 0;
+}
+
+.hearts-warning {
+  background: #fffbeb;
+  border-right: 4px solid #f59e0b;
+  padding: 18px;
+  border-radius: 14px;
+  margin: 24px 0;
+}
+
+.hearts-success {
+  background: #ecfdf5;
+  border-right: 4px solid #059669;
+  padding: 18px;
+  border-radius: 14px;
+  margin: 24px 0;
+}
+
+/* ----- بطاقات المحتوى ----- */
+.hearts-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 24px 0;
+}
+
+.hearts-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+/* ----- أزرار ----- */
+.hearts-btn {
+  display: inline-block;
+  background: linear-gradient(to right,#1d4ed8,#1e40af);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform .3s;
+}
+
+.hearts-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ----- نص ضبابي متحرك ----- */
+.hearts-blur-text {
+  color: rgba(0,0,0,.55);
+  font-size: 18px;
+  text-align: center;
+  margin: 25px 0;
+  animation: heartsBlurFade 3s ease-in-out infinite;
+}
+
+@keyframes heartsBlurFade {
+  0% { opacity: 0; filter: blur(6px);}
+  50% { opacity: 1; filter: blur(0);}
+  100% { opacity: 0; filter: blur(6px);}
+}
+
+/* ----- الجوال ----- */
 @media (max-width: 768px) {
-    .post-body {
-        width: 95% !important;
-        padding: 20px !important;
-        font-size: 16px !important;
-    }
+  .hearts-article {
+    font-size: 16px;
+    padding: 18px 14px;
+  }
 }
