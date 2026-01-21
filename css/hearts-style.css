@@ -1,99 +1,154 @@
-/* ======================================
-   Hearts Library - The Vertical Card Layout
-====================================== */
-
-/* 1. إعداد خلفية الموقع العامة (الرمادي الباهت خلف العمود) */
+كود css GitHub  الجديد 
+/* Hearts Site - GitHub Assets */
 body {
-  background-color: #f0f2f5 !important;
+  font-family: Tajawal, Cairo, Arial, sans-serif;
 }
 
-/* 2. تنسيق عمود المقال (البطاقة البيضاء كما في صورك) */
-.post-body,
-.entry-content,
-.hearts-article,
-.post-outer {
-  max-width: 750px !important; /* عرض العمود المثالي */
-  margin: 30px auto !important; /* توسيط العمود بمسافة علوية */
-  background: #ffffff !important; /* لون البطاقة أبيض ناصع */
-  padding: 40px 30px !important; /* مسافات داخلية واسعة لراحة العين */
-  line-height: 2.0 !important; /* تباعد الأسطر المريح جداً */
-  font-size: 18px !important; /* حجم الخط الواضح */
-  color: #374151 !important; /* لون نص احترافي */
-  text-align: right !important;
-  border-radius: 12px !important; /* انحناء بسيط للزوايا */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important; /* الظل الذي يبرز العمود */
-  direction: rtl !important;
-  border: 1px solid #e5e7eb !important; /* إطار خفيف جداً */
-}
-
-/* 3. العناوين (الحمراء بلمسة المقالات الدينية والتقنية) */
-.post-body h1, .post-body h2, .post-body h3,
-.hearts-article h2 {
-  color: #b91c1c !important;
-  font-weight: bold !important;
-  margin: 40px 0 20px !important;
-  line-height: 1.5 !important;
-  text-align: right !important;
-}
-
-/* 4. تنسيق الصور (عادية وحادة الزوايا كما طلبت) */
-.post-body img {
-  max-width: 100% !important;
-  border-radius: 0px !important;
-  margin: 25px auto !important;
-  display: block !important;
-  box-shadow: none !important;
-}
-
-/* 5. الأزرار الزرقاء المتدرجة */
-.hearts-btn {
-  display: inline-block;
-  padding: 12px 35px;
-  background: linear-gradient(135deg, #2563eb, #1e40af) !important;
-  color: #ffffff !important;
-  border-radius: 50px;
-  text-decoration: none !important;
-  font-weight: 600;
-  transition: 0.3s ease;
-  border: none;
-  margin: 10px 0;
-}
-.hearts-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(37,99,235,0.4); }
-
-/* 6. صندوق التحميل والدائرة */
-.hearts-download-box {
-  background: #f8fafc;
-  border: 2px dashed #cbd5e1;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  margin: 30px 0;
-}
-.hearts-circle {
-  width: 120px;
-  height: 120px;
-  background: #2563eb;
-  color: #fff !important;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* الصندوق الرئيسي للمقال */
+.hearts-box {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
   margin: 20px auto;
+  border-radius: 12px;
+  background: #fafafa;
+  max-width: 800px; /* عرض ثابت للمقال */
+  text-align: center; /* جعل النصوص في الوسط */
+}
+
+/* العناوين مع خلفية ملونة (Gradient) تعمل على كل القوالب */
+.blurry-title {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 28px;
+  color: #fff;
+  background: linear-gradient(135deg, #2b55a8, #00c864); /* أزرق-أخضر */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* تصميم صندوق التحميل الاحترافي */
+.hearts-download-box {
+  background: #ffffff;
+  border: 2px dashed #2b55a8;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.hearts-download-box:hover {
+  transform: translateY(-5px);
+  border-style: solid;
+}
+
+.hearts-download-box h4 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.hearts-download-btn {
+  display: inline-block;
+  background: #2b55a8;
+  color: #fff !important;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
   font-weight: bold;
+  margin-top: 15px;
+  transition: background 0.3s;
 }
 
-/* 7. القوائم المنظمة */
-.post-body ul, .post-body ol {
-  padding-right: 35px !important;
-  margin-bottom: 25px !important;
+.hearts-download-btn:hover {
+  background: #1a3a7a;
+  box-shadow: 0 5px 15px rgba(43, 85, 168, 0.3);
 }
-.post-body li { margin-bottom: 12px !important; }
 
-/* 8. تحسين العرض على الجوال */
-@media (max-width: 768px) {
-  .post-body, .hearts-article {
-    margin: 10px !important;
-    padding: 20px 15px !important;
-    font-size: 17px !important;
-  }
+كود css
+القديم
+
+/* Hearts Site - GitHub Assets */
+body {
+  font-family: Tajawal, Cairo, Arial, sans-serif;
+}
+
+.hearts-box {
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+/* تصميم صندوق التحميل الاحترافي */
+.hearts-download-box {
+  background: #ffffff;
+  border: 2px dashed #2b55a8;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.hearts-download-box:hover {
+  transform: translateY(-5px);
+  border-style: solid;
+}
+
+.hearts-download-box h4 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.hearts-download-btn {
+  display: inline-block;
+  background: #2b55a8;
+  color: #fff !important;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.hearts-download-btn:hover {
+  background: #1a3a7a;
+  box-shadow: 0 5px 15px rgba(43, 85, 168, 0.3);
+}
+/* الصندوق الرئيسي للمقال */
+.hearts-box {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  background: #fafafa;
+  max-width: 800px; /* تحديد عرض ثابت للمقال */
+  text-align: center; /* جعل النصوص في الوسط */
+}
+
+/* تأثير خلفية ضبابية للعناوين */
+.blurry-title {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+
+.blurry-title::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(43, 85, 168, 0.6), rgba(0, 200, 100, 0.6));
+  filter: blur(12px);
+  border-radius: 8px;
+  z-index: -1;
 }
