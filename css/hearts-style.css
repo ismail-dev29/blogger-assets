@@ -1,66 +1,41 @@
-/* =============================
-   Hearts Library - Full Article Layout (Optimized)
-============================= */
+/* ====== Hearts Library for Blogger (Pure CSS) ====== */
 
-/* ----- المقالة العامة ----- */
-.hearts-article {
-  font-family: "Cairo","Tajawal",Tahoma,Arial,sans-serif;
-  font-size: 17px;
-  line-height: 1.9;
-  color: #333;
-  max-width: 700px;          /* عرض مريح للقراءة */
-  margin: 0 auto;
-  padding: 22px 20px;
-  background: #F6F9FE;       /* خلفية مريحة */
-  border-radius: 14px;
-  direction: rtl;
-  text-align: right;
-}
-
-/* ----- الفقرات ----- */
-.hearts-article p {
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-/* ----- القوائم ----- */
-.hearts-article ul,
-.hearts-article ol {
-  padding-right: 20px;
-  margin: 20px 0;
-  list-style-position: inside;
-}
-
-.hearts-article li {
-  margin-bottom: 10px;
-}
-
-/* ----- العناوين ----- */
-.hearts-article h1,
-.hearts-article h2,
-.hearts-article h3 {
-  font-weight: 700;
-  color: #1f3a8a;
+/* ----- العمود الرئيسي للمقال ----- */
+.post-body,
+.entry-content,
+.item-post-resizer {
+  max-width: 42rem;
+  margin: 17px auto;
+  background: #F0F3F8;
+  padding: 32px;
+  line-height: 1.7;
+  font-size: 18px;
   text-align: center;
-  margin: 34px 0 18px;
+  word-break: break-word;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
 
-.hearts-article h2 {
-  border-right: 4px solid #c1121f;
-  padding-right: 12px;
+/* الفقرات والقوائم */
+.post-body p {
+  margin-bottom: 20px;
 }
-
-.hearts-article h3 {
-  color: #c1121f;
+.post-body ul,
+.post-body ol {
+  padding-right: 20px;
+  margin-bottom: 16px;
+}
+.post-body li {
+  margin-bottom: 8px;
 }
 
 /* ----- مربعات عامة ----- */
 .hearts-box {
-  background: #ffffff;
+  background: #f9fafb;
   border: 1px solid #e5e7eb;
   padding: 20px;
   border-radius: 16px;
-  margin: 24px 0;
+  margin: 20px 0;
   text-align: center;
 }
 
@@ -68,25 +43,23 @@
 .hearts-info {
   background: #eff6ff;
   border-right: 4px solid #1d4ed8;
-  padding: 18px;
-  border-radius: 14px;
-  margin: 24px 0;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 20px 0;
 }
-
 .hearts-warning {
   background: #fffbeb;
   border-right: 4px solid #f59e0b;
-  padding: 18px;
-  border-radius: 14px;
-  margin: 24px 0;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 20px 0;
 }
-
 .hearts-success {
   background: #ecfdf5;
   border-right: 4px solid #059669;
-  padding: 18px;
-  border-radius: 14px;
-  margin: 24px 0;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 20px 0;
 }
 
 /* ----- بطاقات المحتوى ----- */
@@ -94,15 +67,27 @@
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin: 24px 0;
+  margin: 20px 0;
 }
-
 .hearts-card {
   background: #ffffff;
   border-radius: 16px;
   padding: 20px;
   text-align: center;
   box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+/* ----- خلفيات ----- */
+.hearts-bg-light {
+  background: linear-gradient(135deg,#f3f4f6,#e5e7eb);
+  padding: 24px;
+  border-radius: 16px;
+}
+.hearts-bg-dark {
+  background: #111827;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
 }
 
 /* ----- أزرار ----- */
@@ -116,30 +101,171 @@
   text-decoration: none;
   transition: transform .3s;
 }
-
 .hearts-btn:hover {
   transform: scale(1.05);
 }
 
-/* ----- نص ضبابي متحرك ----- */
-.hearts-blur-text {
-  color: rgba(0,0,0,.55);
-  font-size: 18px;
+/* ----- صندوق تحميل ----- */
+.hearts-download-box {
+  background: #ffffff;
+  border: 2px dashed #1d4ed8;
+  border-radius: 16px;
+  padding: 20px;
   text-align: center;
-  margin: 25px 0;
-  animation: heartsBlurFade 3s ease-in-out infinite;
+  margin: 20px 0;
+}
+.hearts-download-btn {
+  display: inline-block;
+  background: #1d4ed8;
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
 }
 
-@keyframes heartsBlurFade {
-  0% { opacity: 0; filter: blur(6px);}
-  50% { opacity: 1; filter: blur(0);}
-  100% { opacity: 0; filter: blur(6px);}
+/* ----- عناوين داخل الصناديق ----- */
+.hearts-box h2,
+.hearts-info h2,
+.hearts-warning h2,
+.hearts-success h2 {
+  font-size: 24px;
+  color: #1d4ed8;
+  margin-bottom: 15px;
 }
 
-/* ----- الجوال ----- */
-@media (max-width: 768px) {
-  .hearts-article {
-    font-size: 16px;
-    padding: 18px 14px;
-  }
+/* ----- دائرة ----- */
+.hearts-circle {
+  width: 144px;
+  height: 144px;
+  background: #1d4ed8;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ----- مربعات ملونة ----- */
+.hearts-square-red,
+.hearts-square-green {
+  width: 192px;
+  height: 192px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin: 20px auto;
+  font-weight: bold;
+  text-align: center;
+}
+.hearts-square-red { background:#dc2626; }
+.hearts-square-green { background:#16a34a; }
+
+/* ----- صناديق متقدمة ----- */
+.hearts-success-green {
+  background:#ecfdf5;
+  border-right:4px solid #16a34a;
+  padding:24px;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  margin:20px 0;
+}
+.hearts-warning-yellow {
+  background:#fffbeb;
+  border-right:4px solid #f59e0b;
+  padding:24px;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  margin:20px 0;
+}
+
+/* ----- نص احترافي ----- */
+.hearts-text-pro {
+  font-size:18px;
+  line-height:1.9;
+  color:#1f2937;
+  background:#f9fafb;
+  padding:20px;
+  border-radius:16px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 6px 15px rgba(0,0,0,.05);
+  margin:20px 0;
+}
+.hearts-text-pro strong { color:#1d4ed8; }
+.hearts-text-pro em { color:#6b7280; font-style:italic; }
+
+/* ----- وميض إسلامي ----- */
+.hearts-islamic-blink {
+  font-family:"Tajawal","Amiri",serif;
+  font-style:italic;
+  font-size:24px;
+  color:#2c3e50;
+  text-align:center;
+  line-height:1.8;
+  margin:25px auto;
+  animation:hearts-blink 2s infinite ease-in-out;
+}
+
+@keyframes hearts-blink {
+  0%,100%{opacity:1}
+  50%{opacity:.3}
+}
+
+/* ----- مشاركة نصية ----- */
+.hearts-share-text {
+  margin:30px auto 10px;
+  text-align:center;
+  font-family:Tajawal,sans-serif;
+  font-size:15px;
+  letter-spacing:6px;
+}
+.hearts-share-text a {
+  color:rgba(0,0,0,.55);
+  text-decoration:none;
+  margin:0 18px;
+}
+.hearts-share-text a:hover {
+  color:rgba(0,0,0,.85);
+}
+
+/* ----- عداد دائري ----- */
+.hearts-circle-timer {
+  width:180px;
+  height:180px;
+  position:relative;
+  margin:40px auto;
+}
+.hearts-circle-timer svg {
+  transform:rotate(-90deg);
+}
+.hearts-circle-bg {
+  stroke:#2563eb;
+  stroke-width:12;
+  fill:none;
+}
+.hearts-circle-progress {
+  stroke:#ffffff;
+  stroke-width:8;
+  fill:none;
+  stroke-linecap:round;
+  stroke-dasharray:565;
+  stroke-dashoffset:565;
+  transition:stroke-dashoffset 1s linear;
+}
+.hearts-circle-number {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:32px;
+  font-weight:bold;
+  color:#ffffff;
+  font-family:Tajawal,sans-serif;
 }
