@@ -4,18 +4,24 @@
 .post-body,
 .entry-content,
 .item-post-resizer {
+  direction: rtl;
+  text-align: right;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #222;
   max-width: 42rem;
-  margin: 17px auto;
-  background: #F0F3F8;
-  padding: 32px;
-  line-height: 1.7;
-  font-size: 18px;
-  text-align: center;
-  word-break: break-word;
+  margin: 20px auto;
+  padding: 22px;
+  background: #f5f9ff;
   border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
-}
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
 
+  /* منع التكسير المزعج */
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+} 
 /* الفقرات والقوائم */
 .post-body p {
   margin-bottom: 20px;
