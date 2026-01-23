@@ -162,3 +162,26 @@ header#sp-header, .head-pz, .par-tp {
     padding: 0 !important;
     margin: 0 !important;
 }
+/* تنسيق صندوق الترحيب - Hearts Box */
+.hearts-box {
+    background-color: #f6f9fe !important; /* لون الخلفية الهادئ الذي تفضله */
+    border: 2px solid #e2e8f0 !important; /* حدود ناعمة */
+    border-radius: 16px !important; /* زوايا دائرية احترافية */
+    padding: 25px !important;
+    margin: 20px auto !important;
+    text-align: center !important;
+    color: #1e3a8a !important; /* لون الخط الكحلي */
+    font-size: 19px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important; /* ظل خفيف جداً */
+    line-height: 1.6 !important;
+    display: block !important;
+    max-width: 90%; /* لضمان التناسب مع شاشات الهاتف */
+}
+
+/* تأثير بسيط عند مرور الماوس (اختياري) */
+.hearts-box:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+}
