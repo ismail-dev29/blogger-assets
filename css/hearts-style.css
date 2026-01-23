@@ -119,4 +119,10 @@
   margin-top: 0;
   font-weight: bold;
 }
+/* تنسيق اختياري للعنوان داخل الصندوق الضبابي */
+.hearts-glass-blue h2, .hearts-glass-blue h3 {
+  color: #1d4ed8;
+  margin-top: 0;
+  font-weight: bold;
+}
  
