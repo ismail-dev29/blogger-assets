@@ -31,21 +31,28 @@
   display: block;
   height: auto;
 }
-
-/* ----- العناوين: محاكاة الصورة المرفقة تماماً ----- */
+/* ----- العناوين: صناديق عادية بلون #F6F9FE ----- */
 .post-body h1, 
 .post-body h2, 
 .post-body h3 {
-  background: #f8f7f4 !important; /* لون الخلفية كما في الصورة */
+  background: #F6F9FE !important; /* اللون الذي طلبته */
   color: #1a1a1a !important;
   padding: 14px 20px !important;
-  margin: 30px -22px 20px -22px !important; /* ممتدة لتلمس الحواف مثل الصورة */
+  
+  /* تم إزالة الهوامش السالبة لمنع الامتداد للخارج */
+  margin: 25px 0 15px 0 !important; 
+  
+  /* عرض تلقائي ليناسب حجم النص أو الحاوية دون خروج */
+  width: auto !important;
+  display: block; 
+  
   font-size: 22px !important;
   font-weight: bold !important;
-  text-align: center; /* توسيط النص كما في الصورة */
+  text-align: center; 
+  border-radius: 8px; /* زوايا ناعمة اختيارية لتناسب الصندوق */
   border: none !important;
-  display: block;
 }
+
 
 /* ----- الفقرات والقوائم ----- */
 .post-body p {
