@@ -90,3 +90,33 @@
   font-weight: bold;
   text-decoration: none;
 }
+/*-----صندوق أزرق ضبابي-----*/
+.hearts-glass-blue {
+  /* لون أزرق شفاف جداً */
+  background: rgba(245, 249, 255, 0.7) !important; 
+  
+  /* تأثير الضباب (Blur) */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* حدود ناعمة بلون أزرق خفيف */
+  border: 1px solid rgba(29, 78, 216, 0.1);
+  border-radius: 16px;
+  
+  /* ظل ناعم جداً ليعطي عمقاً */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  
+  padding: 25px;
+  margin: 20px 0;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
+}
+
+/* تنسيق اختياري للعنوان داخل الصندوق الضبابي */
+.hearts-glass-blue h2, .hearts-glass-blue h3 {
+  color: #1d4ed8;
+  margin-top: 0;
+  font-weight: bold;
+}
+ 
