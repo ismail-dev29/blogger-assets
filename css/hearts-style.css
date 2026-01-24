@@ -15,6 +15,16 @@
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
+/* توحيد لون خلفية القالب مع لون المقال */
+body, #main-wrapper, .body-outer, #outer-wrapper {
+    background-color: #F4F9FF !important;
+    background-image: none !important; /* لإزالة أي صور خلفية قديمة */
+}
+
+/* لضمان تناسق المساحات الجانبية */
+.content-wrapper, .main-outer {
+    background: transparent !important;
+}
 
 /* الفقرات والقوائم */
 .post-body p { margin-bottom: 20px; }
