@@ -1,20 +1,44 @@
 /* ====== Hearts Library for Blogger (Pure CSS) ====== */
-
-/* ----- العمود الرئيسي للمقال ----- */
-.post-body,
-.entry-content,
-.item-post-resizer {
-  max-width: 42rem;
-  margin: 20px auto;
-  background: #F4F9FF;
-  padding: 32px;
-  line-height: 1.9;
-  font-size: 18px;
-  text-align: center;
-  word-break: break-word;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+/* --- التنسيق الاحترافي: حاويات الأرقام (مثل الصورة 1) --- */
+.post-body ol {
+    list-style-type: none !important;
+    counter-reset: hearts-counter;
+    padding: 0 !important;
+    margin: 25px 0 !important;
 }
+
+.post-body ol li {
+    position: relative !important;
+    background: #ffffff !important; /* حاوية بيضاء تبرز فوق الخلفية الزرقاء الباهتة للموقع */
+    margin-bottom: 12px !important;
+    padding: 15px 55px 15px 15px !important;
+    border-radius: 12px !important;
+    border: 1px solid #e3f2fd !important; /* إطار أزرق خفيف جداً للتناسق */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+    display: block !important;
+    font-size: 15px !important;
+    color: #333 !important;
+}
+
+/* الرقم الدائري الأزرق المميز */
+.post-body ol li::before {
+    content: counter(hearts-counter);
+    counter-increment: hearts-counter;
+    position: absolute !important;
+    right: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: linear-gradient(135deg, #2196F3, #1976D2) !important; /* تدرج أزرق بسيط */
+    color: #fff !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: bold !important;
+}
+
 /* --- تنسيق الأرقام لتصبح دوائر زرقاء (مثل صورة Pages) --- */
 .post-body ol {
     list-style-type: none !important; /* إخفاء الأرقام الافتراضية */
