@@ -15,6 +15,45 @@
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
+/* --- تنسيق الأرقام لتصبح دوائر زرقاء (مثل صورة Pages) --- */
+.post-body ol {
+    list-style-type: none !important; /* إخفاء الأرقام الافتراضية */
+    counter-reset: hearts-counter; /* ضبط عداد جديد */
+    padding-right: 0 !important;
+}
+
+.post-body ol li {
+    position: relative;
+    margin-bottom: 20px;
+    padding-right: 55px; /* مساحة للدائرة */
+    line-height: 1.8;
+}
+
+.post-body ol li::before {
+    content: counter(hearts-counter); /* عرض الرقم */
+    counter-increment: hearts-counter; /* زيادة العداد */
+    
+    /* تصميم الدائرة */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background-color: #2196F3 !important; /* اللون الأزرق الموضح في الصورة */
+    color: #ffffff !important;
+    border-radius: 50%; /* لجعلها دائرة كاملة */
+    
+    /* توسط الرقم داخل الدائرة */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(33, 150, 243, 0.3);
+}
+
 /* توحيد لون خلفية القالب مع لون المقال */
 body, #main-wrapper, .body-outer, #outer-wrapper {
     background-color: #F4F9FF !important;
