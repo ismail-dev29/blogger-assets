@@ -1,5 +1,12 @@
-/* ====== Hearts Library for Blogger (Pure CSS) ====== */
-/* --- التنسيق الاحترافي: حاويات الأرقام (مثل الصورة 1) --- */
+/* ====== Hearts Library for Blogger (Clean Version) ====== */
+
+/* 1. توحيد خلفية الموقع */
+body, #main-wrapper, .body-outer, #outer-wrapper {
+    background-color: #ffffff !important;
+    background-image: none !important;
+}
+
+/* 2. تنسيق صناديق الأرقام الاحترافية (مثل الصورة 1) */
 .post-body ol {
     list-style-type: none !important;
     counter-reset: hearts-counter;
@@ -9,223 +16,54 @@
 
 .post-body ol li {
     position: relative !important;
-    background: #ffffff !important; /* حاوية بيضاء تبرز فوق الخلفية الزرقاء الباهتة للموقع */
-    margin-bottom: 12px !important;
-    padding: 15px 55px 15px 15px !important;
-    border-radius: 12px !important;
-    border: 1px solid #e3f2fd !important; /* إطار أزرق خفيف جداً للتناسق */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+    background: #ffffff !important; 
+    margin-bottom: 15px !important;
+    padding: 18px 60px 18px 20px !important; /* مساحة للرقم اليمين */
+    border-radius: 15px !important;
+    border: 1px solid #e3f2fd !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03) !important;
     display: block !important;
-    font-size: 15px !important;
+    line-height: 1.8 !important;
     color: #333 !important;
 }
 
-/* الرقم الدائري الأزرق المميز */
+/* تصميم الرقم الدائري الأزرق */
 .post-body ol li::before {
     content: counter(hearts-counter);
     counter-increment: hearts-counter;
     position: absolute !important;
-    right: 12px !important;
+    right: 15px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    width: 30px !important;
-    height: 30px !important;
-    background: linear-gradient(135deg, #2196F3, #1976D2) !important; /* تدرج أزرق بسيط */
+    width: 32px !important;
+    height: 32px !important;
+    background: linear-gradient(135deg, #2196F3, #1976D2) !important;
     color: #fff !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     font-weight: bold !important;
+    font-size: 15px !important;
 }
 
-/* --- تنسيق الأرقام لتصبح دوائر زرقاء (مثل صورة Pages) --- */
-.post-body ol {
-    list-style-type: none !important; /* إخفاء الأرقام الافتراضية */
-    counter-reset: hearts-counter; /* ضبط عداد جديد */
-    padding-right: 0 !important;
-}
+/* 3. صناديق التنبيه (معلومات - نجاح - تحذير) */
+.hearts-box { background: #ffffff; border: 1px solid #e5e7eb; padding: 20px; border-radius: 16px; margin: 20px 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
+.hearts-info { background: #eff6ff; border-right: 5px solid #2196F3; padding: 16px; border-radius: 12px; margin: 20px 0; color: #1e40af; }
+.hearts-success { background: #ecfdf5; border-right: 5px solid #059669; padding: 16px; border-radius: 12px; margin: 20px 0; color: #065f46; }
+.hearts-warning { background: #fffbeb; border-right: 5px solid #f59e0b; padding: 16px; border-radius: 12px; margin: 20px 0; color: #92400e; }
 
-.post-body ol li {
-    position: relative;
-    margin-bottom: 20px;
-    padding-right: 55px; /* مساحة للدائرة */
-    line-height: 1.8;
-}
+/* 4. النصوص الاحترافية */
+.hearts-text-pro { font-size:18px; line-height:1.9; color:#1f2937; background:#ffffff; padding:20px; border-radius:16px; border:1px solid #e3f2fd; box-shadow:0 6px 15px rgba(0,0,0,.04); margin:20px 0; }
+.hearts-islamic-blink { font-family: "Amiri", serif; font-size:26px; color:#2c3e50; text-align:center; margin:30px auto; animation:hearts-blink 2s infinite ease-in-out; }
+@keyframes hearts-blink { 0%,100%{opacity:1} 50%{opacity:.4} }
 
-.post-body ol li::before {
-    content: counter(hearts-counter); /* عرض الرقم */
-    counter-increment: hearts-counter; /* زيادة العداد */
-    
-    /* تصميم الدائرة */
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 35px;
-    height: 35px;
-    background-color: #2196F3 !important; /* اللون الأزرق الموضح في الصورة */
-    color: #ffffff !important;
-    border-radius: 50%; /* لجعلها دائرة كاملة */
-    
-    /* توسط الرقم داخل الدائرة */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    font-weight: bold;
-    font-size: 16px;
-    box-shadow: 0 2px 5px rgba(33, 150, 243, 0.3);
-}
-
-/* توحيد لون خلفية القالب مع لون المقال */
-body, #main-wrapper, .body-outer, #outer-wrapper {
-    background-color: #F4F9FF !important;
-    background-image: none !important; /* لإزالة أي صور خلفية قديمة */
-}
-
-/* لضمان تناسق المساحات الجانبية */
-.content-wrapper, .main-outer {
-    background: transparent !important;
-}
-
-/* الفقرات والقوائم */
-.post-body p { margin-bottom: 20px; }
-.post-body ul, .post-body ol { padding-right: 20px; margin-bottom: 16px; }
-.post-body li { margin-bottom: 8px; }
-
-/* ----- مربعات عامة ----- */
-.hearts-box { background: #f9fafb; border: 1px solid #e5e7eb; padding: 20px; border-radius: 16px; margin: 20px 0; text-align: center; }
-
-/* ----- مربعات معلومة / تحذير / نجاح ----- */
-.hearts-info { background: #eff6ff; border-right: 4px solid #1d4ed8; padding: 16px; border-radius: 12px; margin: 20px 0; }
-.hearts-warning { background: #fffbeb; border-right: 4px solid #f59e0b; padding: 16px; border-radius: 12px; margin: 20px 0; }
-.hearts-success { background: #ecfdf5; border-right: 4px solid #059669; padding: 16px; border-radius: 12px; margin: 20px 0; }
-
-/* ----- بطاقات المحتوى ----- */
-.hearts-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 20px 0; }
-.hearts-card { background: #ffffff; border-radius: 16px; padding: 20px; text-align: center; box-shadow: 0 8px 18px rgba(0,0,0,.08); }
-
-/* ----- أزرار ----- */
-.hearts-btn { display: inline-block; background: linear-gradient(to right,#1d4ed8,#1e40af); color: #fff; padding: 12px 28px; border-radius: 999px; font-weight: bold; text-decoration: none; transition: transform .3s; }
-.hearts-btn:hover { transform: scale(1.05); }
-
-/* ----- نص احترافي وميض ----- */
-.hearts-text-pro { font-size:18px; line-height:1.9; color:#1f2937; background:#f9fafb; padding:20px; border-radius:16px; border:1px solid #e5e7eb; box-shadow:0 6px 15px rgba(0,0,0,.05); margin:20px 0; }
-.hearts-islamic-blink { font-family:"Tajawal","Amiri",serif; font-style:italic; font-size:24px; color:#2c3e50; text-align:center; line-height:1.8; margin:25px auto; animation:hearts-blink 2s infinite ease-in-out; }
-@keyframes hearts-blink { 0%,100%{opacity:1} 50%{opacity:.3} }
-
-/* ----- عداد دائري ----- */
-.hearts-circle-timer { width:180px; height:180px; position:relative; margin:40px auto; }
-.hearts-circle-progress { stroke:#ffffff; stroke-width:8; fill:none; stroke-linecap:round; stroke-dasharray:565; stroke-dashoffset:565; transition:stroke-dashoffset 1s linear; }
-
-/* ======================================
-   Hearts – Smooth Fade Text (One Time)
-   ====================================== */
-.hearts-fade-once {
-  opacity: 0;
-  color: rgba(0, 0, 0, 0.55);
-  font-size: 20px;
-  text-align: center;
-  margin: 25px 0;
-  animation: heartsFadeOnce 2.5s ease-out forwards;
-}
-.hearts-fade-once.islamic { font-family: 'Amiri', serif; font-style: italic; }
-@keyframes heartsFadeOnce {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- تنسيق القائمة الجانبية المنسدلة (Sidebar Accordion) --- */
-
-/* 1. الحاوية الرئيسية للقائمة */
-.hearts-side-menu {
-    background: #ffffff !important;
-    border-radius: 12px !important;
-    border: 1px solid #f0f4f8 !important; /* إطار ناعم جداً */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
-    overflow: hidden;
-    direction: rtl; /* ضمان المحاذاة العربية */
-    font-family: inherit;
-}
-
-/* 2. تنسيق القسم الرئيسي (العنوان القابل للضغط) */
-.hearts-menu-item {
-    border-bottom: 1px solid #f1f5f9 !important;
-}
-
-.hearts-menu-item:last-child {
-    border-bottom: none !important;
-}
-
-.hearts-menu-item summary {
-    padding: 15px 20px !important;
-    font-weight: bold !important;
-    color: #1a365d !important; /* لون كحلي فخم */
-    cursor: pointer !important;
-    list-style: none !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    transition: background 0.3s ease !important;
-    outline: none !important;
-}
-
-.hearts-menu-item summary:hover {
-    background: #f8fbff !important;
-    color: #2196F3 !important;
-}
-
-/* إيقونة السهم الجانبي */
-.hearts-menu-item summary::after {
-    content: '←'; 
-    font-size: 14px !important;
-    color: #2196F3 !important;
-    transition: transform 0.3s ease !important;
-}
-
-/* حركة السهم عند فتح القائمة */
-.hearts-menu-item[open] summary::after {
-    transform: rotate(-90deg) !important;
-}
-
-/* 3. حاوية الروابط الفرعية (تنسيق القائمة العمودية) */
-.hearts-menu-content {
-    background: #fcfdfe !important;
-    padding: 5px 0 !important;
-}
-
-.hearts-menu-content a {
-    display: block !important; /* أهم كود لجعل الروابط أسفل بعضها */
-    padding: 12px 35px 12px 15px !important; /* مسافة يمين للأيقونة */
-    color: #4a5568 !important;
-    text-decoration: none !important;
-    font-size: 14px !important;
-    border-bottom: 1px solid #f7f9fc !important;
-    transition: all 0.2s ease !important;
-    position: relative !important;
-}
-
-/* إضافة نقطة زرقاء صغيرة قبل كل رابط فرعي */
-.hearts-menu-content a::before {
-    content: '';
-    position: absolute !important;
-    right: 20px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 6px !important;
-    height: 6px !important;
-    background: #2196F3 !important;
-    border-radius: 50% !important;
-    opacity: 0.5;
-}
-
-.hearts-menu-content a:hover {
-    background-color: #f1f8ff !important;
-    color: #2196F3 !important;
-    padding-right: 40px !important; /* حركة دفع بسيطة عند التمرير */
-}
-
-.hearts-menu-content a:last-child {
-    border-bottom: none !important;
-}
+/* 5. القائمة الجانبية المنسدلة (Sidebar) */
+.hearts-side-menu { background: #ffffff !important; border-radius: 12px !important; border: 1px solid #f0f4f8 !important; overflow: hidden; direction: rtl; }
+.hearts-menu-item { border-bottom: 1px solid #f1f5f9 !important; }
+.hearts-menu-item summary { padding: 15px 20px !important; font-weight: bold !important; color: #1a365d !important; cursor: pointer !important; list-style: none !important; display: flex !important; justify-content: space-between !important; align-items: center !important; }
+.hearts-menu-item summary::after { content: '←'; color: #2196F3; transition: 0.3s; }
+.hearts-menu-item[open] summary::after { transform: rotate(-90deg); }
+.hearts-menu-content a { display: block !important; padding: 12px 35px 12px 15px !important; color: #4a5568 !important; text-decoration: none !important; font-size: 14px !important; border-bottom: 1px solid #f7f9fc !important; position: relative !important; }
+.hearts-menu-content a::before { content: ''; position: absolute !important; right: 20px !important; top: 50% !important; transform: translateY(-50%) !important; width: 6px !important; height: 6px !important; background: #2196F3 !important; border-radius: 50% !important; opacity: 0.4; }
+.hearts-menu-content a:hover { background: #f1f8ff !important; color: #2196F3 !important; }
