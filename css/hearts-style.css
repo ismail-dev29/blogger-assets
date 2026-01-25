@@ -135,3 +135,97 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* --- تنسيق القائمة الجانبية المنسدلة (Sidebar Accordion) --- */
+
+/* 1. الحاوية الرئيسية للقائمة */
+.hearts-side-menu {
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    border: 1px solid #f0f4f8 !important; /* إطار ناعم جداً */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
+    overflow: hidden;
+    direction: rtl; /* ضمان المحاذاة العربية */
+    font-family: inherit;
+}
+
+/* 2. تنسيق القسم الرئيسي (العنوان القابل للضغط) */
+.hearts-menu-item {
+    border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.hearts-menu-item:last-child {
+    border-bottom: none !important;
+}
+
+.hearts-menu-item summary {
+    padding: 15px 20px !important;
+    font-weight: bold !important;
+    color: #1a365d !important; /* لون كحلي فخم */
+    cursor: pointer !important;
+    list-style: none !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    transition: background 0.3s ease !important;
+    outline: none !important;
+}
+
+.hearts-menu-item summary:hover {
+    background: #f8fbff !important;
+    color: #2196F3 !important;
+}
+
+/* إيقونة السهم الجانبي */
+.hearts-menu-item summary::after {
+    content: '←'; 
+    font-size: 14px !important;
+    color: #2196F3 !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* حركة السهم عند فتح القائمة */
+.hearts-menu-item[open] summary::after {
+    transform: rotate(-90deg) !important;
+}
+
+/* 3. حاوية الروابط الفرعية (تنسيق القائمة العمودية) */
+.hearts-menu-content {
+    background: #fcfdfe !important;
+    padding: 5px 0 !important;
+}
+
+.hearts-menu-content a {
+    display: block !important; /* أهم كود لجعل الروابط أسفل بعضها */
+    padding: 12px 35px 12px 15px !important; /* مسافة يمين للأيقونة */
+    color: #4a5568 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    border-bottom: 1px solid #f7f9fc !important;
+    transition: all 0.2s ease !important;
+    position: relative !important;
+}
+
+/* إضافة نقطة زرقاء صغيرة قبل كل رابط فرعي */
+.hearts-menu-content a::before {
+    content: '';
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 6px !important;
+    height: 6px !important;
+    background: #2196F3 !important;
+    border-radius: 50% !important;
+    opacity: 0.5;
+}
+
+.hearts-menu-content a:hover {
+    background-color: #f1f8ff !important;
+    color: #2196F3 !important;
+    padding-right: 40px !important; /* حركة دفع بسيطة عند التمرير */
+}
+
+.hearts-menu-content a:last-child {
+    border-bottom: none !important;
+}
