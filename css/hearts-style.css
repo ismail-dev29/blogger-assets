@@ -1,4 +1,4 @@
-/* ====== Hearts Library for Blogger (Clean Version) ====== */
+/* ====== Hearts Library for Blogger (Integrated & Clean Version) ====== */
 
 /* 1. توحيد خلفية الموقع */
 body, #main-wrapper, .body-outer, #outer-wrapper {
@@ -6,7 +6,20 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
     background-image: none !important;
 }
 
-/* 2. تنسيق صناديق الأرقام الاحترافية (مثل الصورة 1) */
+/* 2. تنسيق العناوين (H2, H3, H4): خلفية Grey ونص أحمر في المنتصف */
+.post-body h2, .post-body h3, .post-body h4 {
+    background-color: #F2F4F7 !important; /* خلفية رمادية ناعمة */
+    color: #E63946 !important; /* لون أحمر احترافي */
+    text-align: center !important; /* توسيط النص */
+    padding: 15px 20px !important;
+    border-radius: 12px !important;
+    margin: 35px 0 20px 0 !important;
+    font-weight: bold !important;
+    border: none !important; /* إلغاء أي خطوط جانبية */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.02) !important;
+}
+
+/* 3. تنسيق صناديق الأرقام (بدون خط جانبي) */
 .post-body ol {
     list-style-type: none !important;
     counter-reset: hearts-counter;
@@ -18,16 +31,16 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
     position: relative !important;
     background: #ffffff !important; 
     margin-bottom: 15px !important;
-    padding: 18px 60px 18px 20px !important; /* مساحة للرقم اليمين */
+    padding: 18px 60px 18px 20px !important;
     border-radius: 15px !important;
-    border: 1px solid #e3f2fd !important;
+    border: 1px solid #f0f4f8 !important; /* إطار ناعم موحد */
     box-shadow: 0 4px 10px rgba(0,0,0,0.03) !important;
     display: block !important;
     line-height: 1.8 !important;
     color: #333 !important;
 }
 
-/* تصميم الرقم الدائري الأزرق */
+/* الرقم الدائري الأزرق */
 .post-body ol li::before {
     content: counter(hearts-counter);
     counter-increment: hearts-counter;
@@ -47,18 +60,44 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
     font-size: 15px !important;
 }
 
-/* 3. صناديق التنبيه (معلومات - نجاح - تحذير) */
+/* 4. صناديق التنبيه العامة (معلومات - نجاح - تحذير) */
 .hearts-box { background: #ffffff; border: 1px solid #e5e7eb; padding: 20px; border-radius: 16px; margin: 20px 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
-.hearts-info { background: #eff6ff; border-right: 5px solid #2196F3; padding: 16px; border-radius: 12px; margin: 20px 0; color: #1e40af; }
-.hearts-success { background: #ecfdf5; border-right: 5px solid #059669; padding: 16px; border-radius: 12px; margin: 20px 0; color: #065f46; }
-.hearts-warning { background: #fffbeb; border-right: 5px solid #f59e0b; padding: 16px; border-radius: 12px; margin: 20px 0; color: #92400e; }
+.hearts-info { background: #eff6ff; border: 1px solid #dbeafe; padding: 16px; border-radius: 12px; margin: 20px 0; color: #1e40af; }
+.hearts-success { background: #ecfdf5; border: 1px solid #d1fae5; padding: 16px; border-radius: 12px; margin: 20px 0; color: #065f46; }
+.hearts-warning { background: #fffbeb; border: 1px solid #fef3c7; padding: 16px; border-radius: 12px; margin: 20px 0; color: #92400e; }
 
-/* 4. النصوص الاحترافية */
-.hearts-text-pro { font-size:18px; line-height:1.9; color:#1f2937; background:#ffffff; padding:20px; border-radius:16px; border:1px solid #e3f2fd; box-shadow:0 6px 15px rgba(0,0,0,.04); margin:20px 0; }
-.hearts-islamic-blink { font-family: "Amiri", serif; font-size:26px; color:#2c3e50; text-align:center; margin:30px auto; animation:hearts-blink 2s infinite ease-in-out; }
-@keyframes hearts-blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+/* 5. تنسيق صندوق التنبيه الذكي (النبض الأزرق بدون خط جانبي) */
+.hearts-smart-info {
+    background-color: #f0f7ff !important;
+    border: 1px solid #c2e0ff !important;
+    padding: 24px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08) !important;
+    margin: 25px 0 !important;
+    animation: hearts-pulse 2s infinite ease-in-out !important;
+    direction: rtl;
+}
 
-/* 5. القائمة الجانبية المنسدلة (Sidebar) */
+.hearts-smart-info h2 {
+    color: #1d4ed8 !important;
+    font-weight: bold !important;
+    font-size: 1.4rem !important;
+    margin-bottom: 12px !important;
+    margin-top: 0 !important;
+    background: none !important; /* إلغاء خلفية h2 العامة داخل الصندوق الذكي */
+    border-bottom: 1px solid #dbeafe !important;
+    padding: 0 0 8px 0 !important;
+    text-align: right !important; /* العنوان داخل الصندوق الذكي يظل لليمين */
+}
+
+.hearts-smart-info p {
+    color: #3b82f6 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+}
+
+/* 6. القائمة الجانبية المنسدلة (Sidebar) */
 .hearts-side-menu { background: #ffffff !important; border-radius: 12px !important; border: 1px solid #f0f4f8 !important; overflow: hidden; direction: rtl; }
 .hearts-menu-item { border-bottom: 1px solid #f1f5f9 !important; }
 .hearts-menu-item summary { padding: 15px 20px !important; font-weight: bold !important; color: #1a365d !important; cursor: pointer !important; list-style: none !important; display: flex !important; justify-content: space-between !important; align-items: center !important; }
@@ -68,33 +107,11 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
 .hearts-menu-content a::before { content: ''; position: absolute !important; right: 20px !important; top: 50% !important; transform: translateY(-50%) !important; width: 6px !important; height: 6px !important; background: #2196F3 !important; border-radius: 50% !important; opacity: 0.4; }
 .hearts-menu-content a:hover { background: #f1f8ff !important; color: #2196F3 !important; }
 
-/* تنسيق صندوق التنبيه الذكي (بديل Tailwind) */
-.hearts-smart-info {
-    background-color: #eff6ff !important; /* لون أزرق باهت */
-    border-right: 5px solid #2563eb !important; /* خط أزرق غامق */
-    padding: 24px !important;
-    border-radius: 15px !important;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
-    margin: 20px 0 !important;
-    animation: hearts-pulse 2s infinite !important; /* حركة النبض */
-}
-
-.hearts-smart-info h2 {
-    color: #1d4ed8 !important;
-    font-weight: bold !important;
-    font-size: 1.5rem !important;
-    margin-bottom: 12px !important;
-    margin-top: 0 !important;
-}
-
-.hearts-smart-info p {
-    color: #2563eb !important;
-    font-size: 1.1rem !important;
-    margin: 0 !important;
-}
-
-/* كود حركة النبض */
+/* 7. تأثيرات الحركة */
 @keyframes hearts-pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.01); opacity: 0.95; }
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08); }
+    50% { transform: scale(1.005); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12); }
 }
+
+.hearts-islamic-blink { font-family: "Amiri", serif; font-size:26px; color:#2c3e50; text-align:center; margin:30px auto; animation:hearts-blink 2s infinite ease-in-out; }
+@keyframes hearts-blink { 0%,100%{opacity:1} 50%{opacity:.4} }
