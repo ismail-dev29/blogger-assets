@@ -1,4 +1,4 @@
-/* ====== Hearts Library for Blogger (Integrated & Clean Version) ====== */
+/* ====== Hearts Library for Blogger (Final Clean Version) ====== */
 
 /* 1. توحيد خلفية الموقع */
 body, #main-wrapper, .body-outer, #outer-wrapper {
@@ -8,14 +8,14 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
 
 /* 2. تنسيق العناوين (H2, H3, H4): خلفية Grey ونص أحمر في المنتصف */
 .post-body h2, .post-body h3, .post-body h4 {
-    background-color: #F2F4F7 !important; /* خلفية رمادية ناعمة */
-    color: #E63946 !important; /* لون أحمر احترافي */
-    text-align: center !important; /* توسيط النص */
+    background-color: #F2F4F7 !important; 
+    color: #E63946 !important; 
+    text-align: center !important; 
     padding: 15px 20px !important;
     border-radius: 12px !important;
     margin: 35px 0 20px 0 !important;
     font-weight: bold !important;
-    border: none !important; /* إلغاء أي خطوط جانبية */
+    border: none !important; 
     box-shadow: inset 0 0 5px rgba(0,0,0,0.02) !important;
 }
 
@@ -33,11 +33,9 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
     margin-bottom: 15px !important;
     padding: 18px 60px 18px 20px !important;
     border-radius: 15px !important;
-    border: 1px solid #f0f4f8 !important; /* إطار ناعم موحد */
+    border: 1px solid #f0f4f8 !important; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.03) !important;
     display: block !important;
-    line-height: 1.8 !important;
-    color: #333 !important;
 }
 
 /* الرقم الدائري الأزرق */
@@ -82,12 +80,11 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
     color: #1d4ed8 !important;
     font-weight: bold !important;
     font-size: 1.4rem !important;
-    margin-bottom: 12px !important;
-    margin-top: 0 !important;
-    background: none !important; /* إلغاء خلفية h2 العامة داخل الصندوق الذكي */
+    margin: 0 0 12px 0 !important;
+    background: none !important; 
     border-bottom: 1px solid #dbeafe !important;
     padding: 0 0 8px 0 !important;
-    text-align: right !important; /* العنوان داخل الصندوق الذكي يظل لليمين */
+    text-align: right !important; 
 }
 
 .hearts-smart-info p {
