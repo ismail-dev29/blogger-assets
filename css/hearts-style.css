@@ -8,11 +8,11 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
 
 /* 2. تنسيق العناوين (H2, H3, H4): خلفية Grey ونص أحمر في المنتصف */
 .post-body h2, .post-body h3, .post-body h4 {
-    background-color: #F2F4F7 !important; 
-    color: #E63946 !important; 
+    background-color: #C6C6C6 !important; 
+    color: #FF0000 !important; 
     text-align: center !important; 
     padding: 15px 20px !important;
-    border-radius: 12px !important;
+    border-radius: 0px !important;
     margin: 35px 0 20px 0 !important;
     font-weight: bold !important;
     border: none !important; 
@@ -112,3 +112,4 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
 
 .hearts-islamic-blink { font-family: "Amiri", serif; font-size:26px; color:#2c3e50; text-align:center; margin:30px auto; animation:hearts-blink 2s infinite ease-in-out; }
 @keyframes hearts-blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+
