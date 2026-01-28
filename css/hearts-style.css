@@ -8,7 +8,7 @@ body, #main-wrapper, .body-outer, #outer-wrapper {
 
 /* 2. تنسيق العناوين (H2, H3, H4): خلفية Grey ونص أحمر في المنتصف */
 .post-body h2, .post-body h3, .post-body h4 {
-    background-color: #C6C6C6 !important; 
+    background-color: #D0DFFF !important; 
     color: #FF0000 !important; 
     text-align: center !important; 
     padding: 15px 20px !important;
